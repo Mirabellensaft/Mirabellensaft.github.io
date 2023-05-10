@@ -25,4 +25,4 @@ jobs:
           PAGES_BRANCH: main
           BUILD_DIR: .
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPOSITORY: mirabellensaft/mirabellensaft.github.io
+          REPOSITORY: mirabellensaft/mirabellensaftpresse
