@@ -5,14 +5,14 @@ base_url = "https://mirabellensaft.github.io"
 compile_sass = true
 
 # Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
+build_search_index = false
 
 # The site theme to use.
 theme = "andromeda"
 
 # Site title
 title = "Mirabellensaftpresse"
-description = "Photography journal theme for Zola"
+description = "This and that."
 
 [markdown]
 # Whether to do syntax highlighting
@@ -22,10 +22,11 @@ highlight_code = true
 [extra]
 # Put all your custom variables here
 header_links = [
-    {name = "CV", url = "https://www.getzola.org/"},
-    {name = "Blog", url = "https://andromeda-theme.netlify.app"}
+    {name = "CV", url = "/cv.pdf"},
+    {name = "About", url = "/about"},
+    {name = "Blog", url = "/"},
 ]
 license = "CC BY-NC 2.0"
-email = "tanks@transfeld.net"
+email = "non"
 name = "Tanks Transfeld"
 # favicon = "/images/favicon.ico"
