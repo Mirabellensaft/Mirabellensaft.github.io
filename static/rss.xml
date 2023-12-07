@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>Mirabellensaftpresse</title>
+      <link>https://www.mirabellensaftpres.se</link>
+      <description>This and that.</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://www.mirabellensaftpres.se/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 05 Dec 2023 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>About</title>
+          <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
+          <author><name>Blog Author Name</name></author>
+          <link>https://www.mirabellensaftpres.se/about/</link>
+          <guid>https://www.mirabellensaftpres.se/about/</guid>
+          <description>&lt;h1 id=&quot;who-am-i&quot;&gt;Who am I?&lt;&#x2F;h1&gt;
+&lt;p&gt;My name is Tanks, I am a chemist, artist and coder. I love cooking, gardening and biking and usually life is too busy to give all of these shenanigans enough room, but I try.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;what-is-this&quot;&gt;What is this?&lt;&#x2F;h1&gt;
+&lt;p&gt;&amp;quot;The internet&amp;quot; is moving away from centralized social media. What was once Twitter is now X, Instagram mutated to be a TikTok Clone, and TikTok is questionable for many reasons. Facebook barely usable for ads and the most random click bait. Time to be steward of my own content again, basically like we already did more then 20 years ago. Just with way nicer tools and better out of the box design.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Sanguine</title>
+          <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
+          <author><name>Blog Author Name</name></author>
+          <link>https://www.mirabellensaftpres.se/sanguine/</link>
+          <guid>https://www.mirabellensaftpres.se/sanguine/</guid>
+          <description>&lt;p&gt;Sanguine or red chalk is a mineral pigment made of clay and hematite (Fe&lt;sub&gt;2&lt;&#x2F;sub&gt;O&lt;sub&gt;3&lt;&#x2F;sub&gt;). It is deep red in color and has been used for artistic expression already by the neanderthals. Since the renaissance it has been shaped into a kind of pencil, used mainly for sketches similar to graphite pencils today.&lt;&#x2F;p&gt;
+&lt;p&gt;The goal is to build a framework for generative art for pen plotters in Rust.&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>
