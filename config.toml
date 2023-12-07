@@ -16,7 +16,7 @@ theme = "andromeda"
 
 # Site title
 title = "Mirabellensaftpresse"
-description = "This and that."
+description = "This and that. A personal website."
 
 author = "mir@bellen.space (Tanks)"
 [markdown]
@@ -27,9 +27,8 @@ highlight_code = true
 [extra]
 # Put all your custom variables here
 header_links = [
-    {name = "CV", url = "/cv.pdf"},
+    # {name = "CV", url = "/cv.pdf"},
     {name = "About", url = "/about"},
-    {name = "Blog", url = "/"},
     {name = "RSS", url = "/rss.xml"},
 ]
 license = "CC BY-NC 2.0"
