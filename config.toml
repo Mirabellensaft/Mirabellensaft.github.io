@@ -30,6 +30,7 @@ header_links = [
     {name = "CV", url = "/cv.pdf"},
     {name = "About", url = "/about"},
     {name = "Blog", url = "/"},
+    {name = "RSS", url = "/rss.xml"},
 ]
 license = "CC BY-NC 2.0"
 email = "non"
