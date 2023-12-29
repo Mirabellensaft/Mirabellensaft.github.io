@@ -18,7 +18,7 @@ theme = "andromeda"
 title = "Mirabellensaftpresse"
 description = "This and that. A personal website."
 
-author = "mir@bellen.space (Tanks)"
+author = "info@transfeld.net"
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
@@ -29,9 +29,10 @@ highlight_code = true
 header_links = [
     # {name = "CV", url = "/cv.pdf"},
     {name = "About", url = "/about"},
+    {name = "Impressum", url = "/impressum"},
     {name = "RSS", url = "/rss.xml"},
 ]
 license = "CC BY-NC 2.0"
-email = "non"
+email = "info@transfeld.net"
 name = "Tanks Transfeld"
 # favicon = "/images/favicon.ico"
