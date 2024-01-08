@@ -12,7 +12,10 @@
                 <a href="{{ config.base_url }}">{{ config.title }}</a>
             </h1>
             <span class="header-link-container">
-                {% for link in config.extra.header_links %}
+                {% for link in config.extra.header_links_int %}
+                <a href="{{ link.url }}" class="header-link" target="_self">{{ link.name }}</a>
+                {% endfor %}
+                {% for link in config.extra.header_links_ext %}
                 <a href="{{ link.url }}" class="header-link" target="_blank">{{ link.name }}</a>
                 {% endfor %}
             </span>

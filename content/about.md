@@ -6,7 +6,6 @@ extra = {header_img = "/2023-12-05-001.jpg"}
 +++
 
 # About
-This is my personal website. 
 
 ## Who am I?
 
