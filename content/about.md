@@ -1,8 +1,8 @@
 +++
 title = "About"
-date = 2023-12-05
+date = 2023-09-01
 description = "What this is about"
-extra = {header_img = "/2023-12-05-001.jpg"}
+extra = {header_img = "/2023-09-01-002.jpg"}
 +++
 
 # About

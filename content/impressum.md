@@ -1,8 +1,8 @@
 +++
 title = "Impressum"
-date = 2023-12-29
+date = 2023-09-01
 description = "Datenschutz und so"
-extra = {header_img = "/2023-12-29-001.png"}
+extra = {header_img = "/2023-09-01-001.png"}
 +++
 
 # Angaben gemäß § 5 TMG
