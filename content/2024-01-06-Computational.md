@@ -6,9 +6,9 @@ extra = {header_img = "/2024-01-02-001.jpg"}
 +++
 Earlier last year, I talked to a former teacher of mine about my plans of making generative art with a pen plotter. She was not amused. I didn't understand, she elaborated. During that time, the writer guilds were striking in Hollywood, among other things against the use of ChatGPT for generating scripts. And making "generative" art sounded to her like I was invested in creating some sort of model that fed on other artists' work without compensation them and finally replacing them. I also failed to give her an understanding, that despite the term, I was doing nothing of the sort.  
 
-One of the reasons I failed was definitely that I was short of terminology. Also a quick google search gave me no easy and distinct answer, rather many opinions and contradictions. So I unironically asked ChatGPT as expert witness for distinction of the three terms computational, generative and algorithmic art, and how they relate to text-to-image models. I also asked it about the threshold of originality concerning all of these.
+One of the reasons I failed was definitely that I was short of terminology. Also, a quick google search gave me no easy and distinct answer, rather many opinions and contradictions. So I unironically asked ChatGPT as expert witness for distinction of the three terms computational, generative and algorithmic art, and how they relate to text-to-image models. I also asked it about the threshold of originality concerning all of these.
 
-While the answer makes sense and feels correct, and probably is not completely off, I have a bitter after taste about the experience. A google search that does not reveal a definite answer means: it's not that simple. After all it takes time and discourse to shape terms. And this is portrayed in the search result. ChatGPT distills the statistically most likely answer out of this question. I noticed, how this answer feels more correct in my head, just because it was easier to read and more comprehensive then a quick google search.
+While the answer makes sense and feels correct, and probably is not completely off, I have a bitter after-taste about the experience. A Google search that does not reveal a definite answer means: it's not that simple. After all it takes time and discourse to shape terms. And this is portrayed in the search result. ChatGPT distills the statistically most likely answer out of this question. I noticed, how this answer feels more correct in my head, just because it was easier to read and more comprehensive than a quick google search.
 
 ChatGPT provides a new form of reduction and simplification. While reductions of complexity are necessary, they are not easy to do and still often stay in people's memories as the full thing. Human made reductions usually come from a conscious compromise, ChatGPT is based on statistical models. I can't say yet if this is bad by itself, but it certainly can't hurt to keep that in mind. Especially the fact, that the comprehensiveness and eloquence of an answer does not make it the more correct answer.  
 
@@ -98,6 +98,6 @@ Thank you for your time.
 
 You're welcome! If you have more questions or need further assistance in the future, feel free to reach out. Have a great day!
 
-Support this work or buy my art works over at 
+<!-- Support this work or buy my art works over at 
 
-<a href='https://ko-fi.com/S6S0N8I4U' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+<a href='https://ko-fi.com/S6S0N8I4U' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a> -->
