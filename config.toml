@@ -34,7 +34,7 @@ header_links_int = [
 ]
 header_links_ext = [
     # {name = "CV", url = "/cv.pdf"}, 
-    {name = "Shop", url = "https://ko-fi.com/S6S0N8I4U"}
+    # {name = "Shop", url = "https://ko-fi.com/S6S0N8I4U"}
 ]
 license = "CC BY-NC 2.0"
 email = "info@transfeld.net"
