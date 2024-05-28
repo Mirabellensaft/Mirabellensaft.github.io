@@ -17,11 +17,11 @@ My name is Tanks, I am a chemist, artist and coder. I love cooking, gardening an
 
 Don't expect regular or frequent updates, but allow yourself to get surprised. I'll post about things I'll make, and maybe even some writing. Who knows! 
 
-## Support Me!
+<!-- ## Support Me!
 
 You can buy my art or send me a coffee if you like my work!
 
-<a href='https://ko-fi.com/S6S0N8I4U' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+<a href='https://ko-fi.com/S6S0N8I4U' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a> -->
 
 ## Other Places where you can find me
 <a rel="me" href="https://mastodon.art/@Mirabellensaft">Mastodon</a>
