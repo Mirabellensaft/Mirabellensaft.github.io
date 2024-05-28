@@ -2,7 +2,7 @@
 title = "Being a First-Time Runner at a Running Event"
 date = 2024-05-28
 description = "An Experience"
-extra = {header_img = "/2024-04-26.jpg"}
+extra = {header_img = "/2024-04-26-001.jpg"}
 +++
 
 ## I participated in a running event for the first time in my life.
