@@ -1,7 +1,7 @@
 +++
-title = "Navigating Learning with Generative AI"
+title = "Navigate Learning with Generative AI"
 date = 2024-10-09
-description = "some strategies beyond generating code snippets"
+description = "Some strategies beyond generating code snippets."
 extra = {header_img = "/2024-06-03-001.jpg"}
 +++
 
