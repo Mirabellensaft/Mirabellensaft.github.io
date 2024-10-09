@@ -1,5 +1,5 @@
 +++
-title = "Navigate Learning with Generative AI"
+title = "Navigating Learning with Generative AI"
 date = 2024-10-09
 description = "Some strategies beyond generating code snippets."
 extra = {header_img = "/2024-06-03-001.jpg"}
@@ -51,8 +51,6 @@ If you do end up generating the snippet, try this:
 
 - Prompt for generation without comments; add comments yourself line by line, then ask if it’s correct.
 - Instead of copy-pasting, type it into your code base. You’ll still learn more.
-
-Your text is mostly clear, but here are a few minor adjustments for improved clarity and flow:
 
 Strategies Independent of Code Snippets:
 
