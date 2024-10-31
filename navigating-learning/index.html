@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+  <title>Navigating Learning with Generative AI</title>
+  <meta name="description" content="Some strategies beyond generating code snippets.">
+  
+  
+
+  <link rel="stylesheet" href="https://www.mirabellensaftpres.se/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/css/nanogallery2.min.css" />
+</head>
+
+
+    <body>
+
+        
+
+        <div class="header-image-container">
+            <h1 class="andromeda-header-text">
+                <a href="https:&#x2F;&#x2F;www.mirabellensaftpres.se">Mirabellensaftpresse</a>
+            </h1>
+            <div class="header-image lozad" data-background-image="&#x2F;2024-06-03-001.jpg" data-placeholder-background="darkgrey"></div>
+            <div class="text-container">
+                <h1 class="page-title">Navigating Learning with Generative AI</h1>
+                <span class="page-description">Some strategies beyond generating code snippets.</span>
+                <span class="page-date">2024&#x2F;10&#x2F;09</span>
+            </div>
+        </div>
+        <div class="body-container">
+            <p>Generative AI tools are here to stay. General platforms like ChatGPT are very versatile. They can be used for acquiring knowledge, but in order to help you master something effectively, there are some things to watch out for. Simply letting it create content for you to consume is the most ineffective form of learning.</p>
+<ul>
+<li>When does learning happen?</li>
+<li>How does this translate to ChatGPT?</li>
+<li>What are the pitfalls?</li>
+</ul>
+<h1 id="when-does-learning-happen">When does learning happen?</h1>
+<p>The ultimate proof that learning was successful is when behavior has changed in an intentional way. For example, you can write a working program in a language you did not know before. So, the objective of every session should ideally be an actual activity, not just reciting knowledge you’ve just consumed.</p>
+<p>For the behavioral change to be intentional, you must set a learning goal. Describe the change you want to see in yourself.</p>
+<p>For example:</p>
+<ul>
+<li>Write a state machine in C that handles connecting and disconnecting to WiFi on an Arduino.</li>
+</ul>
+<p>If you achieve this without help, you have learned something new!</p>
+<p>Before the age of AI, you would have taken several steps to get to this point:</p>
+<ul>
+<li>Map out the states your state machine needs.</li>
+<li>Research different possibilities for writing a state machine in C, and decide on the best one for your use case.</li>
+<li>Explore which libraries handle WiFi connections on your Arduino.</li>
+<li>Peek into the library to check out which methods it provides.</li>
+</ul>
+<p>...and many more! It would have taken time. You would take wrong turns, things might not work, and you’d find a better solution. With persistence, you would eventually reach your goal.</p>
+<p>In the end, the time you spent, the missteps you made, the questions you asked, and the detours you took would create a solid understanding. There is no shortcut to investing time.</p>
+<h1 id="how-does-this-translate-to-chatgpt">How does this translate to ChatGPT?</h1>
+<p>With a generative AI resource, it’s easy to produce content, like a code snippet, in the blink of an eye. The temptation to simply create the snippet and copy-paste it is strong. You may end up with a working program, but did you <em>really</em> learn something, based on the definition above?</p>
+<p>In order to be effective, the broad strategy is to allow yourself to get active beyond reading the screen output and approach acquiring knowledge with an iterative process.</p>
+<p>So, rather than just trying to generate that code snippet, try the following:</p>
+<ul>
+<li>Create a template for you to fill in.</li>
+<li>Produce pseudocode, then translate it into C.</li>
+<li>Ask for a selection of syntax you would use.</li>
+<li>Demand an explanation of code you found somewhere else, such as libraries.</li>
+<li>Write the code yourself, then describe what it does in a prompt to compare how it differs from generated code.</li>
+</ul>
+<p>If you do end up generating the snippet, try this:</p>
+<ul>
+<li>Prompt for generation without comments; add comments yourself line by line, then ask if it’s correct.</li>
+<li>Instead of copy-pasting, type it into your code base. You’ll still learn more.</li>
+</ul>
+<p>Strategies Independent of Code Snippets:</p>
+<ul>
+<li>Generate review questions for yourself to answer.</li>
+<li>Paraphrase or summarize the output in writing.</li>
+<li>Actively engage with the content by asking questions about specific details or researching those questions in other resources.</li>
+</ul>
+<h1 id="what-are-the-pitfalls">What are the pitfalls?</h1>
+<h2 id="correct-vs-plausible-information">Correct vs. plausible information</h2>
+<p>LLMs produce statistically plausible content. Chances are, the details are correct — but it may also be incorrect in various ways. No source of knowledge is without mistakes, but this is different from generating content on a large scale, with correctness being more subject to randomness.</p>
+<h2 id="chatgpt-drops-context-makes-random-assumptions-and-associations">ChatGPT drops context, makes random assumptions, and associations</h2>
+<p>A few annoying examples illustrate what to be aware of:</p>
+<ul>
+<li>Generated code snippets that omit details you already provided.</li>
+<li>Output of C++ code instead of C, because C is a subset of C, and it’s just plausible that they are next to each other.</li>
+<li>Using libraries that are unsuitable for your similar but different use case.</li>
+<li>Inventing libraries or other resources</li>
+</ul>
+<h2 id="chatgpt-doesn-t-make-comprehensible-judgments">ChatGPT doesn’t make comprehensible judgments.</h2>
+<p>Because the content generated is based on statistical plausibility, if you ask for evaluation, you will get statistically plausible judgments. In this context, judgments refer to choices like didactic reductions, libraries, or problem-solving methods. Judgments depend highly on context, which you might lack when you’re just starting, and you can’t be know what context the LLM is using beyond what you provided. Asking for this will lead nowhere because LLMs aren’t aware of the context on which they base their output.</p>
+<h2 id="chatgpt-does-what-you-ask-for-but-it-may-not-be-what-you-want">ChatGPT does what you ask for, but it may not be what you want.</h2>
+<p>When it comes to building skills, this means LLMs can only offer knowledge that is within the horizon of what you are able to ask for. They cannot reliably confront you with knowledge you don’t know exists. Since you’re new to the subject, you also can’t judge the output with respect to this issue.</p>
+<p>When acquiring knowledge systematically, this confrontation is what you need. Not knowing what to ask for is expected when learning something new.</p>
+<p>Solutions to this are to also use human-curated materials, like books and websites, or taking a class.</p>
+<h2 id="be-mindful-of-whether-you-are-truly-working-toward-your-goal">Be mindful of whether you are truly working toward your goal.</h2>
+<p>Code snippets for more complex systems, such as embedded systems, rarely work out of the box. You will learn a lot and sharpen your problem-solving skills by making them work, but this may not always contribute to your target in a meaningful way. After all "making a code snippet work" and "writing that code snippet" are similar, but different goals.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Generative AIs can be a great resource to help you gain new skills, but using them requires you to be very reflective about your learning process and the mechanisms they operate on. This adds additional overhead compared to classical, instruction-based education methods.</p>
+<p>Being aware of your learning process is valuable, but you also need the capacity for this, in addition to building the skills you set out for.</p>
+<p>However, learning works best when it is interest-driven, and exploring new tools and platforms definitely adds to that. So go on and find out what these resources have to offer for you! Just remember, you can't take shortcuts to actively engaging with the subject.</p>
+
+        </div>
+        
+        
+
+        
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/jquery.nanogallery2.min.js"></script>
+<script>
+  // Add lazy loading to all elements
+  const elements = document.querySelectorAll('body *');
+  elements.forEach((element) => {
+    element.classList.add('lozad');
+    element.setAttribute('data-loaded', 'false')
+  });
+  const obs = lozad();
+  obs.observe();
+
+  // Gallery setup
+  $(".gallery").each( function( index, element ) {
+    const items = $(this)[0].children.length;
+    if (items == 1) {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        thumbnailHeight: 'auto', thumbnailWidth: $( window ).width(),
+        thumbnailBorderHorizontal: 1,
+        thumbnailBorderVertical: 1,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }   
+        })
+    } else if (items == 2) {
+        $(this).nanogallery2({
+
+          // GALLERY AND THUMBNAIL LAYOUT
+          galleryDisplayMode: 'fullContent',
+          // gallerySorting: 'random',
+          thumbnailHeight: '400', thumbnailWidth: 'auto',
+          thumbnailAlignment: 'center',
+          thumbnailBaseGridHeight: 100,
+          thumbnailL1GutterWidth: 4,
+          thumbnailL1GutterHeight: 4,
+          thumbnailBorderHorizontal: 2,
+          thumbnailBorderVertical: 2,
+
+          // THUMBNAIL TOOLS & LABEL
+          thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+          
+          // DISPLAY ANIMATION
+          thumbnailDisplayTransition: 'fadeIn',
+          thumbnailDisplayTransitionDuration: 500,
+          thumbnailDisplayInterval: 30,
+
+          // // THUMBNAIL'S HOVER ANIMATION
+          // thumbnailHoverEffect2: 'imageScaleIn90',
+          touchAnimation: true,
+          touchAutoOpenDelay: 800,
+          
+          // DEEP LINKING
+          locationHash: false,
+
+          // VIEWER TOOLBAR CONFIG
+          viewerTools:    {
+            topLeft:    'pageCounter',
+            topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+          }   
+      });
+    } else {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        galleryDisplayMode: 'fullContent',
+        // gallerySorting: 'random',
+        thumbnailHeight: '250', thumbnailWidth: 'auto',
+        thumbnailAlignment: 'center',
+        thumbnailBaseGridHeight: 100,
+        thumbnailL1GutterWidth: 4,
+        thumbnailL1GutterHeight: 4,
+        thumbnailBorderHorizontal: 2,
+        thumbnailBorderVertical: 2,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }
+      });
+    }
+  });
+</script>
+<div class="footer-black">
+  <div class="text-block">
+    
+    <p>By Tanks Transfeld</p>
+    
+    
+    <p>Drop me a letter at <a href="mailto:info@transfeld.net">info@transfeld.net</a></p>
+    
+    
+    <p class="license">This site is licensed CC BY-NC 2.0</p>
+    
+  </div>
+</div>
+
+
+    </body>
+
+</html>
