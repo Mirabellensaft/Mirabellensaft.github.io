@@ -7,7 +7,7 @@ extra = {header_img = "/2025-01-25-001.png"}
 
 Recently I was asked how I debug my generated images, and if I render them often, or if I do all the math in my head. 
 
-The answer is: I always render an image when I run the code. It's just part of the process. It depends on The Answer: I always render an image when I run the code. It's just part of the process. Whether I focus on the images or the console output depends on what I'm debugging. It also depends a bit on my mood—sometimes I go for a trial-and-error approach, other times I do the calculations in my head or on paper.
+The Answer: I always render an image when I run the code. It's just part of the process. Whether I focus on the images or the console output depends on what I'm debugging. It also depends a bit on my mood—sometimes I go for a trial-and-error approach, other times I do the calculations in my head or on paper.
 
 Another thing I do is take the lines I generate apart in Inkscape. That way, I can check what I’ve actually created and see if it matches what I intended.
 
