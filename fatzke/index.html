@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+  <title>Gewandtheit, Fatzke!*</title>
+  <meta name="description" content="About Experimenting">
+  
+  
+
+  <link rel="stylesheet" href="https://www.mirabellensaftpres.se/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/css/nanogallery2.min.css" />
+</head>
+
+
+    <body>
+
+        
+
+        <div class="header-image-container">
+            <h1 class="andromeda-header-text">
+                <a href="https:&#x2F;&#x2F;www.mirabellensaftpres.se">Mirabellensaftpresse</a>
+            </h1>
+            <div class="header-image lozad" data-background-image="&#x2F;2023-10-16-001.jpg" data-placeholder-background="darkgrey"></div>
+            <div class="text-container">
+                <h1 class="page-title">Gewandtheit, Fatzke!*</h1>
+                <span class="page-description">About Experimenting</span>
+                <span class="page-date">2023&#x2F;10&#x2F;16</span>
+            </div>
+        </div>
+        <div class="body-container">
+            <p>*agility, pompous! (Rough translation of the German derogatory term Fatzke, meaning arrogant person.) Two words on two dictionary pages that ended up next to each other in a prominent place in a collage. Or rather should have ended up there, and are now barely visible.</p>
+<p>I like working with found books. I prefer non-fiction, collections of information, tables, lists, formulas and scientific illustrations. Preferably older editions. I like how the type fonts are just different from what we're used to today. I like old paper. Usually I take pieces out of the books and glue them to artist grade paper or canvases. I use a lot of acrylic binder in the process, so the old paper is basically encased in plastic, once dried. I paint over them with all sorts of paints and colors, so they only appear in traces in the finished work and are well worked in and safe. But sometimes I experiment.</p>
+<p>I painted directly on the wet dictionary pages, with homemade walnut ink. With acrylic paint. With more liquid acrylic paint and Chinese ink. I let the sheets dry. The tape I used to mount the pages was already hard to get off without ripping the delicate, flimsy dictionary paper apart. It was also the strong tape, the one that's water-resistant. Not the one for delicate papers.</p>
+<p>In the next step, I wanted to cut the pages into pieces and stick the pieces together in a new way to make a piece about the size of one page. I cut the pages, taped the new edges together, so they stay aligned. I repeated this step a couple of times, wanting to keep it short to not let the tape stick longer then necessary. I cut the outer edges and glued the piece to more sturdy piece of paper.</p>
+<div class="gallery">
+    <a href="/2023-10-16-001.jpg" data-ngthumb="/2023-10-16-001.jpg"></a>
+    <a href="/2023-10-16-002.jpg" data-ngthumb="/2023-10-16-002.jpg"></a>
+    <a href="/2023-10-16-003.jpg" data-ngthumb="/2023-10-16-003.jpg"></a>
+</div>
+<p>Upon pulling the tape, when the piece was dry, the paper surface ripped off with the tape. No more Fatzke. No more clean cut edges.</p>
+<p>What now? I liked the process a lot. I can envision, what this would have looked like, and like the image in front of my mental eye. I like how the sharp cut edges disturb the flow of my painted lines, blobs and marks and how they continue, on the other side of the edge with a little offset. How this pattern also is visible in the dictionary page, how words come together. Gewandtheit, Fatzke!</p>
+<p>Taking a closer look, I figured that the paper ripped exactly in the spots where there was no acrylic paint, but where the paper was probably not only damaged by age but by the wet technique. Covering the entire peace with acrylic binder may protect it, alone because tape can be removed easier from smooth surfaces. Next time.</p>
+<!-- Support this work or buy my art works over at 
+
+<a href='https://ko-fi.com/S6S0N8I4U' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a> -->
+
+        </div>
+        
+        
+
+        
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/jquery.nanogallery2.min.js"></script>
+<script>
+  // Add lazy loading to all elements
+  const elements = document.querySelectorAll('body *');
+  elements.forEach((element) => {
+    element.classList.add('lozad');
+    element.setAttribute('data-loaded', 'false')
+  });
+  const obs = lozad();
+  obs.observe();
+
+  // Gallery setup
+  $(".gallery").each( function( index, element ) {
+    const items = $(this)[0].children.length;
+    if (items == 1) {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        thumbnailHeight: 'auto', thumbnailWidth: $( window ).width(),
+        thumbnailBorderHorizontal: 1,
+        thumbnailBorderVertical: 1,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }   
+        })
+    } else if (items == 2) {
+        $(this).nanogallery2({
+
+          // GALLERY AND THUMBNAIL LAYOUT
+          galleryDisplayMode: 'fullContent',
+          // gallerySorting: 'random',
+          thumbnailHeight: '400', thumbnailWidth: 'auto',
+          thumbnailAlignment: 'center',
+          thumbnailBaseGridHeight: 100,
+          thumbnailL1GutterWidth: 4,
+          thumbnailL1GutterHeight: 4,
+          thumbnailBorderHorizontal: 2,
+          thumbnailBorderVertical: 2,
+
+          // THUMBNAIL TOOLS & LABEL
+          thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+          
+          // DISPLAY ANIMATION
+          thumbnailDisplayTransition: 'fadeIn',
+          thumbnailDisplayTransitionDuration: 500,
+          thumbnailDisplayInterval: 30,
+
+          // // THUMBNAIL'S HOVER ANIMATION
+          // thumbnailHoverEffect2: 'imageScaleIn90',
+          touchAnimation: true,
+          touchAutoOpenDelay: 800,
+          
+          // DEEP LINKING
+          locationHash: false,
+
+          // VIEWER TOOLBAR CONFIG
+          viewerTools:    {
+            topLeft:    'pageCounter',
+            topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+          }   
+      });
+    } else {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        galleryDisplayMode: 'fullContent',
+        // gallerySorting: 'random',
+        thumbnailHeight: '250', thumbnailWidth: 'auto',
+        thumbnailAlignment: 'center',
+        thumbnailBaseGridHeight: 100,
+        thumbnailL1GutterWidth: 4,
+        thumbnailL1GutterHeight: 4,
+        thumbnailBorderHorizontal: 2,
+        thumbnailBorderVertical: 2,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }
+      });
+    }
+  });
+</script>
+<div class="footer-black">
+  <div class="text-block">
+    
+    <p>By Tanks Transfeld</p>
+    
+    
+    <p>Drop me a letter at <a href="mailto:info@transfeld.net">info@transfeld.net</a></p>
+    
+    
+    <p class="license">This site is licensed CC BY-NC 2.0</p>
+    
+  </div>
+</div>
+
+
+    </body>
+
+</html>

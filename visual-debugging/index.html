@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+  <title>Visual Debugging</title>
+  <meta name="description" content="For when you don&#x27;t want to do the math in your head.">
+  
+  
+
+  <link rel="stylesheet" href="https://www.mirabellensaftpres.se/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/css/nanogallery2.min.css" />
+</head>
+
+
+    <body>
+
+        
+
+        <div class="header-image-container">
+            <h1 class="andromeda-header-text">
+                <a href="https:&#x2F;&#x2F;www.mirabellensaftpres.se">Mirabellensaftpresse</a>
+            </h1>
+            <div class="header-image lozad" data-background-image="&#x2F;2025-01-25-001.png" data-placeholder-background="darkgrey"></div>
+            <div class="text-container">
+                <h1 class="page-title">Visual Debugging</h1>
+                <span class="page-description">For when you don&#x27;t want to do the math in your head.</span>
+                <span class="page-date">2025&#x2F;01&#x2F;25</span>
+            </div>
+        </div>
+        <div class="body-container">
+            <p>Recently I was asked how I debug my generated images, and if I render them often, or if I do all the math in my head.</p>
+<p>The Answer: I always render an image when I run the code. It's just part of the process. Whether I focus on the images or the console output depends on what I'm debugging. It also depends a bit on my mood—sometimes I go for a trial-and-error approach, other times I do the calculations in my head or on paper.</p>
+<p>Another thing I do is take the lines I generate apart in <a href="https://inkscape.org/de/">Inkscape</a>. That way, I can check what I’ve actually created and see if it matches what I intended.</p>
+<div class="gallery"> <a href="/veranator/nr_000_20250125_192023.png" data-ngthumb="/veranator/nr_000_20250125_192023.png"></a> </div>
+<p>I wanted to make a 3x3 grid of concentric squares. For some reason—still unknown at the time—I didn’t get a proper 3x3 grid. Instead, I only got the first square from the first row, the second from the second row, and the third from the third row.</p>
+<p>First, I focused on getting the single shape right using the above-mentioned trial-and-error method. I was particularly not in the mood for math in my head that day, this could have been calculated correctly before generating. After this I moved on to debugging the grid. Finally, I worked on the margin. Fixing the grid and margin required changes to the <a href="https://github.com/Mirabellensaft/Sanguine/tree/main">Sanguine library</a>.</p>
+<p>The grid didn’t work because of a typo that had been in the library for almost two years. I hadn’t noticed it before because I never accessed that variable in this particular way. I mixed up a <a href="https://github.com/Mirabellensaft/Sanguine/blob/8b3098f1f80d6ee69b5257dc3e03a0b9dc31cd94/sanguine_lib/src/resources/layout/grid.rs#L63">y for an x</a>. As for the margin, that was something I never implemented correctly. It didn’t really matter when plotting, so I never paid much attention to it until now.</p>
+<p>To show the process, I have uploaded all the images I rendered along the way — from the starting point, which was based on another piece of code, to the final result. Every time I ran the code, an image was created. In image 21, you can see how I moved the lines manually to check what was underneath. It's the version of the image that was changed after it was rendered first. The images 22 to 32 look the same. This means I didn’t change the code but used the console output instead to figure out where the mistake was. You need to run the code to see console output, so an image is created nevertheless.</p>
+<div class="gallery">
+    <a href="/veranator/nr_000_20250119_171857.png" data-ngthumb="/veranator/nr_000_20250119_171857.png"></a> 
+    <a href="/veranator/nr_000_20250119_174558.png" data-ngthumb="/veranator/nr_000_20250119_174558.png"></a>
+    <a href="/veranator/nr_000_20250119_174712.png" data-ngthumb="/veranator/nr_000_20250119_174712.png"></a>
+    <a href="/veranator/nr_000_20250119_174742.png" data-ngthumb="/veranator/nr_000_20250119_174742.png"></a>
+    <a href="/veranator/nr_000_20250119_174811.png" data-ngthumb="/veranator/nr_000_20250119_174811.png"></a>
+    <a href="/veranator/nr_000_20250119_174916.png" data-ngthumb="/veranator/nr_000_20250119_174916.png"></a>
+    <a href="/veranator/nr_000_20250119_175002.png" data-ngthumb="/veranator/nr_000_20250119_175002.png"></a>
+    <a href="/veranator/nr_000_20250119_175114.png" data-ngthumb="/veranator/nr_000_20250119_175114.png"></a>
+    <a href="/veranator/nr_000_20250119_175230.png" data-ngthumb="/veranator/nr_000_20250119_175230.png"></a>
+    <a href="/veranator/nr_000_20250119_175319.png" data-ngthumb="/veranator/nr_000_20250119_175319.png"></a>
+    <a href="/veranator/nr_000_20250119_175401.png" data-ngthumb="/veranator/nr_000_20250119_175401.png"></a>
+    <a href="/veranator/nr_000_20250119_175500.png" data-ngthumb="/veranator/nr_000_20250119_175500.png"></a>
+    <a href="/veranator/nr_000_20250119_175556.png" data-ngthumb="/veranator/nr_000_20250119_175556.png"></a>
+    <a href="/veranator/nr_000_20250119_175624.png" data-ngthumb="/veranator/nr_000_20250119_175624.png"></a>
+    <a href="/veranator/nr_000_20250119_175657.png" data-ngthumb="/veranator/nr_000_20250119_175657.png"></a>
+    <a href="/veranator/nr_000_20250119_175744.png" data-ngthumb="/veranator/nr_000_20250119_175744.png"></a>
+    <a href="/veranator/nr_000_20250119_175815.png" data-ngthumb="/veranator/nr_000_20250119_175815.png"></a>
+    <a href="/veranator/nr_000_20250119_175847.png" data-ngthumb="/veranator/nr_000_20250119_175847.png"></a>
+    <a href="/veranator/nr_000_20250119_175928.png" data-ngthumb="/veranator/nr_000_20250119_175928.png"></a>
+    <a href="/veranator/nr_000_20250119_175955.png" data-ngthumb="/veranator/nr_000_20250119_175955.png"></a>
+    <a href="/veranator/nr_000_20250119_181119.png" data-ngthumb="/veranator/nr_000_20250119_181119.png"></a>
+    <a href="/veranator/nr_000_20250119_181415.png" data-ngthumb="/veranator/nr_000_20250119_181415.png"></a>
+    <a href="/veranator/nr_000_20250119_181508.png" data-ngthumb="/veranator/nr_000_20250119_181508.png"></a>
+    <a href="/veranator/nr_000_20250119_182049.png" data-ngthumb="/veranator/nr_000_20250119_182049.png"></a>
+    <a href="/veranator/nr_000_20250119_182237.png" data-ngthumb="/veranator/nr_000_20250119_182237.png"></a>
+    <a href="/veranator/nr_000_20250119_182427.png" data-ngthumb="/veranator/nr_000_20250119_182427.png"></a>
+    <a href="/veranator/nr_000_20250119_182549.png" data-ngthumb="/veranator/nr_000_20250119_182549.png"></a>
+    <a href="/veranator/nr_000_20250125_183152.png" data-ngthumb="/veranator/nr_000_20250125_183152.png"></a>
+    <a href="/veranator/nr_000_20250125_183946.png" data-ngthumb="/veranator/nr_000_20250125_183946.png"></a>
+    <a href="/veranator/nr_000_20250125_185349.png" data-ngthumb="/veranator/nr_000_20250125_185349.png"></a>
+    <a href="/veranator/nr_000_20250125_185804.png" data-ngthumb="/veranator/nr_000_20250125_185804.png"></a>
+    <a href="/veranator/nr_000_20250125_190145.png" data-ngthumb="/veranator/nr_000_20250125_190145.png"></a>
+    <a href="/veranator/nr_000_20250125_190722.png" data-ngthumb="/veranator/nr_000_20250125_190722.png"></a>
+    <a href="/veranator/nr_000_20250125_191055.png" data-ngthumb="/veranator/nr_000_20250125_191055.png"></a>
+    <a href="/veranator/nr_000_20250125_190722.png" data-ngthumb="/veranator/nr_000_20250125_190722.png"></a>
+    <a href="/veranator/nr_000_20250125_191055.png" data-ngthumb="/veranator/nr_000_20250125_191055.png"></a>
+    <a href="/veranator/nr_000_20250125_191315.png" data-ngthumb="/veranator/nr_000_20250125_191315.png"></a>
+    <a href="/veranator/nr_000_20250125_191530.png" data-ngthumb="/veranator/nr_000_20250125_191530.png"></a>
+    <a href="/veranator/nr_000_20250125_191636.png" data-ngthumb="/veranator/nr_000_20250125_191636.png"></a>
+    <a href="/veranator/nr_000_20250125_191724.png" data-ngthumb="/veranator/nr_000_20250125_191724.png"></a>
+    <a href="/veranator/nr_000_20250125_192023.png" data-ngthumb="/veranator/nr_000_20250125_192023.png"></a>
+</div>
+
+        </div>
+        
+        
+
+        
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/jquery.nanogallery2.min.js"></script>
+<script>
+  // Add lazy loading to all elements
+  const elements = document.querySelectorAll('body *');
+  elements.forEach((element) => {
+    element.classList.add('lozad');
+    element.setAttribute('data-loaded', 'false')
+  });
+  const obs = lozad();
+  obs.observe();
+
+  // Gallery setup
+  $(".gallery").each( function( index, element ) {
+    const items = $(this)[0].children.length;
+    if (items == 1) {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        thumbnailHeight: 'auto', thumbnailWidth: $( window ).width(),
+        thumbnailBorderHorizontal: 1,
+        thumbnailBorderVertical: 1,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }   
+        })
+    } else if (items == 2) {
+        $(this).nanogallery2({
+
+          // GALLERY AND THUMBNAIL LAYOUT
+          galleryDisplayMode: 'fullContent',
+          // gallerySorting: 'random',
+          thumbnailHeight: '400', thumbnailWidth: 'auto',
+          thumbnailAlignment: 'center',
+          thumbnailBaseGridHeight: 100,
+          thumbnailL1GutterWidth: 4,
+          thumbnailL1GutterHeight: 4,
+          thumbnailBorderHorizontal: 2,
+          thumbnailBorderVertical: 2,
+
+          // THUMBNAIL TOOLS & LABEL
+          thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+          
+          // DISPLAY ANIMATION
+          thumbnailDisplayTransition: 'fadeIn',
+          thumbnailDisplayTransitionDuration: 500,
+          thumbnailDisplayInterval: 30,
+
+          // // THUMBNAIL'S HOVER ANIMATION
+          // thumbnailHoverEffect2: 'imageScaleIn90',
+          touchAnimation: true,
+          touchAutoOpenDelay: 800,
+          
+          // DEEP LINKING
+          locationHash: false,
+
+          // VIEWER TOOLBAR CONFIG
+          viewerTools:    {
+            topLeft:    'pageCounter',
+            topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+          }   
+      });
+    } else {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        galleryDisplayMode: 'fullContent',
+        // gallerySorting: 'random',
+        thumbnailHeight: '250', thumbnailWidth: 'auto',
+        thumbnailAlignment: 'center',
+        thumbnailBaseGridHeight: 100,
+        thumbnailL1GutterWidth: 4,
+        thumbnailL1GutterHeight: 4,
+        thumbnailBorderHorizontal: 2,
+        thumbnailBorderVertical: 2,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }
+      });
+    }
+  });
+</script>
+<div class="footer-black">
+  <div class="text-block">
+    
+    <p>By Tanks Transfeld</p>
+    
+    
+    <p>Drop me a letter at <a href="mailto:info@transfeld.net">info@transfeld.net</a></p>
+    
+    
+    <p class="license">This site is licensed CC BY-NC 2.0</p>
+    
+  </div>
+</div>
+
+
+    </body>
+
+</html>

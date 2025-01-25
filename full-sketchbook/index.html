@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+  <title>A Full Sketch Book</title>
+  <meta name="description" content="Still Always a Celebration.">
+  
+  
+
+  <link rel="stylesheet" href="https://www.mirabellensaftpres.se/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/css/nanogallery2.min.css" />
+</head>
+
+
+    <body>
+
+        
+
+        <div class="header-image-container">
+            <h1 class="andromeda-header-text">
+                <a href="https:&#x2F;&#x2F;www.mirabellensaftpres.se">Mirabellensaftpresse</a>
+            </h1>
+            <div class="header-image lozad" data-background-image="&#x2F;2024-02-10-002.jpg" data-placeholder-background="darkgrey"></div>
+            <div class="text-container">
+                <h1 class="page-title">A Full Sketch Book</h1>
+                <span class="page-description">Still Always a Celebration.</span>
+                <span class="page-date">2024&#x2F;02&#x2F;10</span>
+            </div>
+        </div>
+        <div class="body-container">
+            <p>Today I am celebrating this tiny 10 cm x 10 cm spiral sketchbook. By now I have finished a lot of sketchbooks, but this one is kind of special to me. I learned a lot while filling it.</p>
+<!-- <div >
+    <iframe
+        src="https://www.youtube.com/embed/uBZ6jhm7Uig"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen>
+    </iframe>
+</div> -->
+
+<div >
+    <iframe src="https://www.youtube-nocookie.com/embed/uBZ6jhm7Uig" webkitallowfullscreen mozallowfullscreen allowfullscreen height="360" width="420"></iframe>
+</div>
+<p>Despite the usual recommendation to go big, this tiny format served me really well. I can work in it on a desk that is filled with other work, it doesn't take up much space when it needs to dry.</p>
+<p>Due to its size, the amount of materials needed is also rather small. Perfect for trying out new things, such as new paints and structure pastes.</p>
+<div class="gallery">
+    <!-- <a href="/2023-12-31-002.jpg" data-ngthumb="/2023-12-31-002.jpg"></a> -->
+    <a href="/2023-12-31-003.jpg" data-ngthumb="/2023-12-31-003.jpg"></a>
+    <a href="/2023-12-31-004.jpg" data-ngthumb="/2023-12-31-004.jpg"></a>
+</div>
+<p>The principles of layering and composition that I learned while settling into the process are still perfectly transferrable to bigger works. I felt way more comfortable working on bigger pieces after filling a portion of the sketchbook and the work was a lot more intuitive.</p>
+<p>I have now a signature mark that I developed in this sketchbook. "Mark" refers to a usually line based pattern that is added to abstract works. Marks are contrasting to elements that are more flat, such as painted areas or areas covered by collage paper. Marks are more intentionally than lines that form by themselves, such as paint pooling in cracks or granulating watercolors.</p>
+<p>While I really like bright colors, and they play an important role in my work, I got a new sense of appreciation for colors that are not bright, such as Sepia brown and Titanium Buff. I am just beginning to grasp the role that white plays in my work.</p>
+<div class="gallery">
+    <a href="/2023-12-31-005.jpg" data-ngthumb="/2023-12-31-005.jpg"></a>
+    <a href="/2024-02-10-001.jpg" data-ngthumb="/2024-02-10-001.jpg"></a>
+</div>
+<p>Speaking of acrylic paint. I was never a fan of acrylic paint beyond that it is more practical in terms of fumes. But through this work I not only found a brand that I like, acrylic paints also play a crucial role in the process: they can be layered on almost any underground, and most things can be layered onto them. Even water color (with a little help of mediums).</p>
+<p>Through this experience, I have built quite a repertoire of sources of collage paper. Hand painted or drawn, found books and prints, gel prints, plotted papers and the odd butcher and wrapping paper.</p>
+<p>Off to the next sketchbook!</p>
+<!-- Support this work or buy my art works over at  -->
+<!-- <a href='https://ko-fi.com/S6S0N8I4U' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a> -->
+
+        </div>
+        
+        
+
+        
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/jquery.nanogallery2.min.js"></script>
+<script>
+  // Add lazy loading to all elements
+  const elements = document.querySelectorAll('body *');
+  elements.forEach((element) => {
+    element.classList.add('lozad');
+    element.setAttribute('data-loaded', 'false')
+  });
+  const obs = lozad();
+  obs.observe();
+
+  // Gallery setup
+  $(".gallery").each( function( index, element ) {
+    const items = $(this)[0].children.length;
+    if (items == 1) {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        thumbnailHeight: 'auto', thumbnailWidth: $( window ).width(),
+        thumbnailBorderHorizontal: 1,
+        thumbnailBorderVertical: 1,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }   
+        })
+    } else if (items == 2) {
+        $(this).nanogallery2({
+
+          // GALLERY AND THUMBNAIL LAYOUT
+          galleryDisplayMode: 'fullContent',
+          // gallerySorting: 'random',
+          thumbnailHeight: '400', thumbnailWidth: 'auto',
+          thumbnailAlignment: 'center',
+          thumbnailBaseGridHeight: 100,
+          thumbnailL1GutterWidth: 4,
+          thumbnailL1GutterHeight: 4,
+          thumbnailBorderHorizontal: 2,
+          thumbnailBorderVertical: 2,
+
+          // THUMBNAIL TOOLS & LABEL
+          thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+          
+          // DISPLAY ANIMATION
+          thumbnailDisplayTransition: 'fadeIn',
+          thumbnailDisplayTransitionDuration: 500,
+          thumbnailDisplayInterval: 30,
+
+          // // THUMBNAIL'S HOVER ANIMATION
+          // thumbnailHoverEffect2: 'imageScaleIn90',
+          touchAnimation: true,
+          touchAutoOpenDelay: 800,
+          
+          // DEEP LINKING
+          locationHash: false,
+
+          // VIEWER TOOLBAR CONFIG
+          viewerTools:    {
+            topLeft:    'pageCounter',
+            topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+          }   
+      });
+    } else {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        galleryDisplayMode: 'fullContent',
+        // gallerySorting: 'random',
+        thumbnailHeight: '250', thumbnailWidth: 'auto',
+        thumbnailAlignment: 'center',
+        thumbnailBaseGridHeight: 100,
+        thumbnailL1GutterWidth: 4,
+        thumbnailL1GutterHeight: 4,
+        thumbnailBorderHorizontal: 2,
+        thumbnailBorderVertical: 2,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }
+      });
+    }
+  });
+</script>
+<div class="footer-black">
+  <div class="text-block">
+    
+    <p>By Tanks Transfeld</p>
+    
+    
+    <p>Drop me a letter at <a href="mailto:info@transfeld.net">info@transfeld.net</a></p>
+    
+    
+    <p class="license">This site is licensed CC BY-NC 2.0</p>
+    
+  </div>
+</div>
+
+
+    </body>
+
+</html>

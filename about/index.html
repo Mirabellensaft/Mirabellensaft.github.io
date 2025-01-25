@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+  <title>About</title>
+  <meta name="description" content="What this is about">
+  
+  
+
+  <link rel="stylesheet" href="https://www.mirabellensaftpres.se/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/css/nanogallery2.min.css" />
+</head>
+
+
+    <body>
+
+        
+
+        <div class="header-image-container">
+            <h1 class="andromeda-header-text">
+                <a href="https:&#x2F;&#x2F;www.mirabellensaftpres.se">Mirabellensaftpresse</a>
+            </h1>
+            <div class="header-image lozad" data-background-image="&#x2F;2023-09-01-002.jpg" data-placeholder-background="darkgrey"></div>
+            <div class="text-container">
+                <h1 class="page-title">About</h1>
+                <span class="page-description">What this is about</span>
+                <span class="page-date">2023&#x2F;09&#x2F;01</span>
+            </div>
+        </div>
+        <div class="body-container">
+            <h1 id="about">About</h1>
+<h2 id="who-am-i">Who am I?</h2>
+<p>My name is Tanks, I am a chemist, artist and coder. I love cooking, gardening and biking and usually life is too busy to give all of these shenanigans enough room, but I try.</p>
+<h2 id="what-is-this">What is this?</h2>
+<p>"The internet" is moving away from centralized social media. What was once Twitter is now X and a rich dudes personal playground, Instagram mutated to be a TikTok clone, and TikTok is questionable for many other reasons. Facebook is barely usable for ads and the most random click bait. Time to be steward of my own content again, basically like we already did more than 20 years ago. Just with way nicer tools and better out of the box design.</p>
+<p>Don't expect regular or frequent updates, but allow yourself to get surprised. I'll post about things I'll make, and maybe even some writing. Who knows!</p>
+<!-- ## Support Me!
+
+You can buy my art or send me a coffee if you like my work!
+
+<a href='https://ko-fi.com/S6S0N8I4U' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a> -->
+<h2 id="other-places-where-you-can-find-me">Other Places where you can find me</h2>
+<p><a rel="me" href="https://mastodon.art/@Mirabellensaft">Mastodon</a></p>
+
+        </div>
+        
+        
+
+        
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/jquery.nanogallery2.min.js"></script>
+<script>
+  // Add lazy loading to all elements
+  const elements = document.querySelectorAll('body *');
+  elements.forEach((element) => {
+    element.classList.add('lozad');
+    element.setAttribute('data-loaded', 'false')
+  });
+  const obs = lozad();
+  obs.observe();
+
+  // Gallery setup
+  $(".gallery").each( function( index, element ) {
+    const items = $(this)[0].children.length;
+    if (items == 1) {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        thumbnailHeight: 'auto', thumbnailWidth: $( window ).width(),
+        thumbnailBorderHorizontal: 1,
+        thumbnailBorderVertical: 1,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }   
+        })
+    } else if (items == 2) {
+        $(this).nanogallery2({
+
+          // GALLERY AND THUMBNAIL LAYOUT
+          galleryDisplayMode: 'fullContent',
+          // gallerySorting: 'random',
+          thumbnailHeight: '400', thumbnailWidth: 'auto',
+          thumbnailAlignment: 'center',
+          thumbnailBaseGridHeight: 100,
+          thumbnailL1GutterWidth: 4,
+          thumbnailL1GutterHeight: 4,
+          thumbnailBorderHorizontal: 2,
+          thumbnailBorderVertical: 2,
+
+          // THUMBNAIL TOOLS & LABEL
+          thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+          
+          // DISPLAY ANIMATION
+          thumbnailDisplayTransition: 'fadeIn',
+          thumbnailDisplayTransitionDuration: 500,
+          thumbnailDisplayInterval: 30,
+
+          // // THUMBNAIL'S HOVER ANIMATION
+          // thumbnailHoverEffect2: 'imageScaleIn90',
+          touchAnimation: true,
+          touchAutoOpenDelay: 800,
+          
+          // DEEP LINKING
+          locationHash: false,
+
+          // VIEWER TOOLBAR CONFIG
+          viewerTools:    {
+            topLeft:    'pageCounter',
+            topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+          }   
+      });
+    } else {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        galleryDisplayMode: 'fullContent',
+        // gallerySorting: 'random',
+        thumbnailHeight: '250', thumbnailWidth: 'auto',
+        thumbnailAlignment: 'center',
+        thumbnailBaseGridHeight: 100,
+        thumbnailL1GutterWidth: 4,
+        thumbnailL1GutterHeight: 4,
+        thumbnailBorderHorizontal: 2,
+        thumbnailBorderVertical: 2,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }
+      });
+    }
+  });
+</script>
+<div class="footer-black">
+  <div class="text-block">
+    
+    <p>By Tanks Transfeld</p>
+    
+    
+    <p>Drop me a letter at <a href="mailto:info@transfeld.net">info@transfeld.net</a></p>
+    
+    
+    <p class="license">This site is licensed CC BY-NC 2.0</p>
+    
+  </div>
+</div>
+
+
+    </body>
+
+</html>

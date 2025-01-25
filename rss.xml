@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>Mirabellensaftpresse</title>
+      <link>https://www.mirabellensaftpres.se</link>
+      <description>This and that.</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://www.mirabellensaftpres.se/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sat, 25 Jan 2025 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Visual Debugging</title>
+          <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+          <author>info@transfeld.net</author>
+          <link>https://www.mirabellensaftpres.se/visual-debugging/</link>
+          <guid>https://www.mirabellensaftpres.se/visual-debugging/</guid>
+          <description xml:base="https://www.mirabellensaftpres.se/visual-debugging/">&lt;p&gt;Recently I was asked how I debug my generated images, and if I render them often, or if I do all the math in my head.&lt;&#x2F;p&gt;
+&lt;p&gt;The Answer: I always render an image when I run the code. It&#x27;s just part of the process. Whether I focus on the images or the console output depends on what I&#x27;m debugging. It also depends a bit on my mood—sometimes I go for a trial-and-error approach, other times I do the calculations in my head or on paper.&lt;&#x2F;p&gt;
+&lt;p&gt;Another thing I do is take the lines I generate apart in &lt;a href=&quot;https:&#x2F;&#x2F;inkscape.org&#x2F;de&#x2F;&quot;&gt;Inkscape&lt;&#x2F;a&gt;. That way, I can check what I’ve actually created and see if it matches what I intended.&lt;&#x2F;p&gt;
+&lt;div class=&quot;gallery&quot;&gt; &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250125_192023.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250125_192023.png&quot;&gt;&lt;&#x2F;a&gt; &lt;&#x2F;div&gt;
+&lt;p&gt;I wanted to make a 3x3 grid of concentric squares. For some reason—still unknown at the time—I didn’t get a proper 3x3 grid. Instead, I only got the first square from the first row, the second from the second row, and the third from the third row.&lt;&#x2F;p&gt;
+&lt;p&gt;First, I focused on getting the single shape right using the above-mentioned trial-and-error method. I was particularly not in the mood for math in my head that day, this could have been calculated correctly before generating. After this I moved on to debugging the grid. Finally, I worked on the margin. Fixing the grid and margin required changes to the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Mirabellensaft&#x2F;Sanguine&#x2F;tree&#x2F;main&quot;&gt;Sanguine library&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The grid didn’t work because of a typo that had been in the library for almost two years. I hadn’t noticed it before because I never accessed that variable in this particular way. I mixed up a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Mirabellensaft&#x2F;Sanguine&#x2F;blob&#x2F;8b3098f1f80d6ee69b5257dc3e03a0b9dc31cd94&#x2F;sanguine_lib&#x2F;src&#x2F;resources&#x2F;layout&#x2F;grid.rs#L63&quot;&gt;y for an x&lt;&#x2F;a&gt;. As for the margin, that was something I never implemented correctly. It didn’t really matter when plotting, so I never paid much attention to it until now.&lt;&#x2F;p&gt;
+&lt;p&gt;To show the process, I have uploaded all the images I rendered along the way — from the starting point, which was based on another piece of code, to the final result. Every time I ran the code, an image was created. In image 21, you can see how I moved the lines manually to check what was underneath. It&#x27;s the version of the image that was changed after it was rendered first. The images 22 to 32 look the same. This means I didn’t change the code but used the console output instead to figure out where the mistake was. You need to run the code to see console output, so an image is created nevertheless.&lt;&#x2F;p&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_171857.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_171857.png&quot;&gt;&lt;&#x2F;a&gt; 
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_174558.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_174558.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_174712.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_174712.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_174742.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_174742.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_174811.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_174811.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_174916.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_174916.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175002.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175002.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175114.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175114.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175230.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175230.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175319.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175319.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175401.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175401.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175500.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175500.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175556.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175556.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175624.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175624.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175657.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175657.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175744.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175744.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175815.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175815.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175847.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175847.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175928.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175928.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175955.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_175955.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_181119.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_181119.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_181415.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_181415.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_181508.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_181508.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_182049.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_182049.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_182237.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_182237.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_182427.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_182427.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250119_182549.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250119_182549.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250125_183152.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250125_183152.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250125_183946.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250125_183946.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250125_185349.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250125_185349.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250125_185804.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250125_185804.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250125_190145.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250125_190145.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250125_190722.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250125_190722.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250125_191055.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250125_191055.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250125_190722.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250125_190722.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250125_191055.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250125_191055.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250125_191315.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250125_191315.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250125_191530.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250125_191530.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250125_191636.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250125_191636.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250125_191724.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250125_191724.png&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;veranator&#x2F;nr_000_20250125_192023.png&quot; data-ngthumb=&quot;&#x2F;veranator&#x2F;nr_000_20250125_192023.png&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+</description>
+      </item>
+      <item>
+          <title>Yuzu Crème Anglais</title>
+          <pubDate>Sat, 18 Jan 2025 00:00:00 +0000</pubDate>
+          <author>info@transfeld.net</author>
+          <link>https://www.mirabellensaftpres.se/yuzu-creme-anglais/</link>
+          <guid>https://www.mirabellensaftpres.se/yuzu-creme-anglais/</guid>
+          <description xml:base="https://www.mirabellensaftpres.se/yuzu-creme-anglais/">&lt;p&gt;For 2.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;1 Yuzu&lt;&#x2F;li&gt;
+&lt;li&gt;200g cream&lt;&#x2F;li&gt;
+&lt;li&gt;vanilla extract&lt;&#x2F;li&gt;
+&lt;li&gt;50g sugar&lt;&#x2F;li&gt;
+&lt;li&gt;3 fresh egg yolks&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Use a zester to remove about 1 teaspoon of Yuzu zest and set it aside for decoration. Finely grate the remaining peel.
+In a pan, bring the grated peel to a boil with cream, vanilla extract, and half of the sugar. Set aside.&lt;&#x2F;p&gt;
+&lt;p&gt;Beat the egg yolks and remaining sugar in a stainless steel bowl with a hand mixer for about 5 minutes until light and frothy. (this may take longer) Continue stirring over a bain-marie until the cream warms up.&lt;&#x2F;p&gt;
+&lt;p&gt;Reheat the yuzu cream in the pan and slowly pour it into the whipped egg mixture, stirring constantly. Continue whisking until the foam thickens and the whisk leaves visible traces.&lt;&#x2F;p&gt;
+&lt;p&gt;Remove the bowl from the bain-marie. Keep whisking the cream until it cools slightly. Squeeze the yuzu juice and stir it into the mixture. Distribute the cream into glasses and chill.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Harvest</title>
+          <pubDate>Thu, 31 Oct 2024 00:00:00 +0000</pubDate>
+          <author>info@transfeld.net</author>
+          <link>https://www.mirabellensaftpres.se/harvest/</link>
+          <guid>https://www.mirabellensaftpres.se/harvest/</guid>
+          <description xml:base="https://www.mirabellensaftpres.se/harvest/">&lt;p&gt;The vibrant colors and flavors of 2024. Food is always a delight, and it&#x27;s even more special when grown just around the corner and harvested moments before it’s eaten.&lt;&#x2F;p&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+    &lt;a href=&quot;&#x2F;2024-10-11-001.jpg&quot; data-ngthumb=&quot;&#x2F;2024-10-11-001.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+    &lt;a href=&quot;&#x2F;2024-10-11-002.jpg&quot; data-ngthumb=&quot;&#x2F;2024-10-11-002.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+    &lt;a href=&quot;&#x2F;2024-10-11-007.jpg&quot; data-ngthumb=&quot;&#x2F;2024-10-11-007.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+    &lt;a href=&quot;&#x2F;2024-10-11-004.jpg&quot; data-ngthumb=&quot;&#x2F;2024-10-11-004.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+    &lt;a href=&quot;&#x2F;2024-10-11-005.jpg&quot; data-ngthumb=&quot;&#x2F;2024-10-11-005.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;2024-10-30-001.jpg&quot; data-ngthumb=&quot;&#x2F;2024-10-30-001.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+    &lt;a href=&quot;&#x2F;2024-10-11-006.jpg&quot; data-ngthumb=&quot;&#x2F;2024-10-11-006.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+    &lt;a href=&quot;&#x2F;2024-10-11-003.jpg&quot; data-ngthumb=&quot;&#x2F;2024-10-11-003.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+&lt;&#x2F;div&gt;
+</description>
+      </item>
+      <item>
+          <title>Celebrating the Lemon</title>
+          <pubDate>Wed, 30 Oct 2024 00:00:00 +0000</pubDate>
+          <author>info@transfeld.net</author>
+          <link>https://www.mirabellensaftpres.se/lemon/</link>
+          <guid>https://www.mirabellensaftpres.se/lemon/</guid>
+          <description xml:base="https://www.mirabellensaftpres.se/lemon/">&lt;p&gt;We have this Meyer lemon tree. Except for the first year, it has given us one lemon each year. Such a gift is a reason for celebration. It has been ripe for a while, but lemons are patient. You can leave them hanging for quite some time. But today was the day.&lt;&#x2F;p&gt;
+&lt;p&gt;I took my garden scissors and carefully severed the fruit from the tree. You can&#x27;t just pull it off; the connection to the branch it grew from is too strong. This lemon has grown quite large. Its touch was softer than that of an ordinary supermarket lemon. The yellow of this kind is warmer than that of typical lemons, and it lacks the prominent nipples characteristic of the standard variety. You can almost guess that Meyer lemons are a cross between lemons and a rounder, orange-colored type of citrus.&lt;&#x2F;p&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+    &lt;a href=&quot;&#x2F;2024-10-30-005.jpg&quot; data-ngthumb=&quot;&#x2F;2024-10-30-005.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;2024-10-30-001.jpg&quot; data-ngthumb=&quot;&#x2F;2024-10-30-001.jpg&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;Next step: cutting the fruit open. The smell is extraordinary. While a typical lemon smells fresh, acidic, and rather cool, the Meyer lemon is much more complex. It’s still acidic but has sweeter, warmer aromas that hint at tangerines. The scent is heavier, yet it still has that lemony freshness.&lt;&#x2F;p&gt;
+&lt;p&gt;To celebrate the lemon, I chose a dish that highlights it as the centerpiece. In the past, I made ice cream or lemonade. Today, I’ll make a &lt;a href=&quot;https:&#x2F;&#x2F;www.zuckerzimtundliebe.de&#x2F;2022&#x2F;01&#x2F;lemon-dutch-baby-rezept-ein-zitronen-ofenpfannkuchen&#x2F;#recipe&quot;&gt;Lemon Dutch Baby&lt;&#x2F;a&gt;—an oven-baked pancake infused with lemon zest and juice. The process of making it is as phenomenal as its taste.&lt;&#x2F;p&gt;
+&lt;p&gt;A pan is preheated in the oven. When the temperature is reached, a spoonful of butter is melted in the pan, and the very liquid batter is poured over it. Toward the end of cooking, the pancake rises dramatically. The result is decorated with lemon slices and tastes wonderfully delicate, full of Meyer lemon flavor.&lt;&#x2F;p&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+    &lt;a href=&quot;&#x2F;2024-10-30-002.jpg&quot; data-ngthumb=&quot;&#x2F;2024-10-30-002.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;2024-10-30-003.jpg&quot; data-ngthumb=&quot;&#x2F;2024-10-30-003.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;2024-10-30-004.jpg&quot; data-ngthumb=&quot;&#x2F;2024-10-30-004.jpg&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;</description>
+      </item>
+      <item>
+          <title>Circloids</title>
+          <pubDate>Fri, 18 Oct 2024 00:00:00 +0000</pubDate>
+          <author>info@transfeld.net</author>
+          <link>https://www.mirabellensaftpres.se/circloids/</link>
+          <guid>https://www.mirabellensaftpres.se/circloids/</guid>
+          <description xml:base="https://www.mirabellensaftpres.se/circloids/">&lt;p&gt;How do you call a shape that is based on a circle, except that not all points are at a distance &lt;em&gt;r&lt;&#x2F;em&gt; from the center? Instead, the distance varies within a set range. I call it a &lt;strong&gt;circloid&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;My goal with this shape was to create a circular form that feels more organic than a perfect circle, as a base to generate more complex shapes. There are so many circular shapes in nature, but they are rarely perfectly round, as surrounding conditions influence their final shape. Think of the growth rings of trees, the shape of mushroom caps, or the petals of flowers. A perfect circle doesn&#x27;t catch the eye because it&#x27;s expected. A circloid — a circle that&#x27;s slightly off-balance — will attract a viewer’s interest.&lt;&#x2F;p&gt;
+&lt;p&gt;In the current version, 2&#x2F;3 of the circloid&#x27;s circumference is defined by a sine function, while the remaining 1&#x2F;3 is an arc that closes the shape. Each time a circloid is generated, the starting point’s angle varies, so the distortion doesn’t always occur in the same direction.&lt;&#x2F;p&gt;
+&lt;p&gt;How far a circloid deviates from a perfect circle of the same base radius depends on the relationship between frequency, amplitude, and base radius.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;High amplitude and lower frequency&lt;&#x2F;strong&gt; distort the circle in one direction. &lt;br&gt;
+&lt;strong&gt;Low amplitude and higher frequency&lt;&#x2F;strong&gt; distort it in multiple directions.&lt;&#x2F;p&gt;
+&lt;p&gt;For a smooth circloid, consider the following ratios:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;radius&lt;&#x2F;em&gt; &#x2F; &lt;em&gt;amplitude&lt;&#x2F;em&gt; should be below 7.0.&lt;br&gt;
+&lt;em&gt;frequency&lt;&#x2F;em&gt; &#x2F; &lt;em&gt;amplitude&lt;&#x2F;em&gt; should be below 0.5.&lt;&#x2F;p&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+&lt;a href=&quot;&#x2F;2024-10-18-003.png&quot; data-ngthumb=&quot;&#x2F;2024-10-18-003.png&quot;&gt;&lt;&#x2F;a&gt; 
+&lt;a href=&quot;&#x2F;2024-10-18-004.png&quot; data-ngthumb=&quot;&#x2F;2024-10-18-004.png&quot;&gt;&lt;&#x2F;a&gt; 
+&lt;a href=&quot;&#x2F;2024-10-18-005.png&quot; data-ngthumb=&quot;&#x2F;2024-10-18-005.png&quot;&gt;&lt;&#x2F;a&gt; 
+&lt;a href=&quot;&#x2F;2024-10-18-006.png&quot; data-ngthumb=&quot;&#x2F;2024-10-18-006.png&quot;&gt;&lt;&#x2F;a&gt; 
+&lt;&#x2F;div&gt;
+&lt;p&gt;In a future version, I can see adding more parameters or predefined options for users to customize the shape exactly as needed.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Lines &amp; Control</title>
+          <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
+          <author>info@transfeld.net</author>
+          <link>https://www.mirabellensaftpres.se/lines-and-control/</link>
+          <guid>https://www.mirabellensaftpres.se/lines-and-control/</guid>
+          <description xml:base="https://www.mirabellensaftpres.se/lines-and-control/">&lt;p&gt;Don&#x27;t hold the brush like a ball point pen.&lt;br&gt;
+Hold it right at its end.&lt;br&gt;
+Hold it with two fingers.&lt;br&gt;
+Hold it away from your body.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Draw a line.&lt;br&gt;
+Draw it, where it goes.&lt;br&gt;
+Let go of controlling it.&lt;br&gt;
+Only to gain it again, to let it go.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Let the control flow.&lt;br&gt;
+Back and forth.&lt;br&gt;&lt;&#x2F;p&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+&lt;a href=&quot;&#x2F;2024-10-17-002.jpg&quot; data-ngthumb=&quot;&#x2F;2024-10-17-002.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+&lt;&#x2F;div&gt;</description>
+      </item>
+      <item>
+          <title>Navigating Learning with Generative AI</title>
+          <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
+          <author>info@transfeld.net</author>
+          <link>https://www.mirabellensaftpres.se/navigating-learning/</link>
+          <guid>https://www.mirabellensaftpres.se/navigating-learning/</guid>
+          <description xml:base="https://www.mirabellensaftpres.se/navigating-learning/">&lt;p&gt;Generative AI tools are here to stay. General platforms like ChatGPT are very versatile. They can be used for acquiring knowledge, but in order to help you master something effectively, there are some things to watch out for. Simply letting it create content for you to consume is the most ineffective form of learning.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;When does learning happen?&lt;&#x2F;li&gt;
+&lt;li&gt;How does this translate to ChatGPT?&lt;&#x2F;li&gt;
+&lt;li&gt;What are the pitfalls?&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;when-does-learning-happen&quot;&gt;When does learning happen?&lt;&#x2F;h1&gt;
+&lt;p&gt;The ultimate proof that learning was successful is when behavior has changed in an intentional way. For example, you can write a working program in a language you did not know before. So, the objective of every session should ideally be an actual activity, not just reciting knowledge you’ve just consumed.&lt;&#x2F;p&gt;
+&lt;p&gt;For the behavioral change to be intentional, you must set a learning goal. Describe the change you want to see in yourself.&lt;&#x2F;p&gt;
+&lt;p&gt;For example:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Write a state machine in C that handles connecting and disconnecting to WiFi on an Arduino.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;If you achieve this without help, you have learned something new!&lt;&#x2F;p&gt;
+&lt;p&gt;Before the age of AI, you would have taken several steps to get to this point:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Map out the states your state machine needs.&lt;&#x2F;li&gt;
+&lt;li&gt;Research different possibilities for writing a state machine in C, and decide on the best one for your use case.&lt;&#x2F;li&gt;
+&lt;li&gt;Explore which libraries handle WiFi connections on your Arduino.&lt;&#x2F;li&gt;
+&lt;li&gt;Peek into the library to check out which methods it provides.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;...and many more! It would have taken time. You would take wrong turns, things might not work, and you’d find a better solution. With persistence, you would eventually reach your goal.&lt;&#x2F;p&gt;
+&lt;p&gt;In the end, the time you spent, the missteps you made, the questions you asked, and the detours you took would create a solid understanding. There is no shortcut to investing time.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;how-does-this-translate-to-chatgpt&quot;&gt;How does this translate to ChatGPT?&lt;&#x2F;h1&gt;
+&lt;p&gt;With a generative AI resource, it’s easy to produce content, like a code snippet, in the blink of an eye. The temptation to simply create the snippet and copy-paste it is strong. You may end up with a working program, but did you &lt;em&gt;really&lt;&#x2F;em&gt; learn something, based on the definition above?&lt;&#x2F;p&gt;
+&lt;p&gt;In order to be effective, the broad strategy is to allow yourself to get active beyond reading the screen output and approach acquiring knowledge with an iterative process.&lt;&#x2F;p&gt;
+&lt;p&gt;So, rather than just trying to generate that code snippet, try the following:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a template for you to fill in.&lt;&#x2F;li&gt;
+&lt;li&gt;Produce pseudocode, then translate it into C.&lt;&#x2F;li&gt;
+&lt;li&gt;Ask for a selection of syntax you would use.&lt;&#x2F;li&gt;
+&lt;li&gt;Demand an explanation of code you found somewhere else, such as libraries.&lt;&#x2F;li&gt;
+&lt;li&gt;Write the code yourself, then describe what it does in a prompt to compare how it differs from generated code.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;If you do end up generating the snippet, try this:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Prompt for generation without comments; add comments yourself line by line, then ask if it’s correct.&lt;&#x2F;li&gt;
+&lt;li&gt;Instead of copy-pasting, type it into your code base. You’ll still learn more.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Strategies Independent of Code Snippets:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Generate review questions for yourself to answer.&lt;&#x2F;li&gt;
+&lt;li&gt;Paraphrase or summarize the output in writing.&lt;&#x2F;li&gt;
+&lt;li&gt;Actively engage with the content by asking questions about specific details or researching those questions in other resources.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;what-are-the-pitfalls&quot;&gt;What are the pitfalls?&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;correct-vs-plausible-information&quot;&gt;Correct vs. plausible information&lt;&#x2F;h2&gt;
+&lt;p&gt;LLMs produce statistically plausible content. Chances are, the details are correct — but it may also be incorrect in various ways. No source of knowledge is without mistakes, but this is different from generating content on a large scale, with correctness being more subject to randomness.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;chatgpt-drops-context-makes-random-assumptions-and-associations&quot;&gt;ChatGPT drops context, makes random assumptions, and associations&lt;&#x2F;h2&gt;
+&lt;p&gt;A few annoying examples illustrate what to be aware of:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Generated code snippets that omit details you already provided.&lt;&#x2F;li&gt;
+&lt;li&gt;Output of C++ code instead of C, because C is a subset of C, and it’s just plausible that they are next to each other.&lt;&#x2F;li&gt;
+&lt;li&gt;Using libraries that are unsuitable for your similar but different use case.&lt;&#x2F;li&gt;
+&lt;li&gt;Inventing libraries or other resources&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;chatgpt-doesn-t-make-comprehensible-judgments&quot;&gt;ChatGPT doesn’t make comprehensible judgments.&lt;&#x2F;h2&gt;
+&lt;p&gt;Because the content generated is based on statistical plausibility, if you ask for evaluation, you will get statistically plausible judgments. In this context, judgments refer to choices like didactic reductions, libraries, or problem-solving methods. Judgments depend highly on context, which you might lack when you’re just starting, and you can’t be know what context the LLM is using beyond what you provided. Asking for this will lead nowhere because LLMs aren’t aware of the context on which they base their output.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;chatgpt-does-what-you-ask-for-but-it-may-not-be-what-you-want&quot;&gt;ChatGPT does what you ask for, but it may not be what you want.&lt;&#x2F;h2&gt;
+&lt;p&gt;When it comes to building skills, this means LLMs can only offer knowledge that is within the horizon of what you are able to ask for. They cannot reliably confront you with knowledge you don’t know exists. Since you’re new to the subject, you also can’t judge the output with respect to this issue.&lt;&#x2F;p&gt;
+&lt;p&gt;When acquiring knowledge systematically, this confrontation is what you need. Not knowing what to ask for is expected when learning something new.&lt;&#x2F;p&gt;
+&lt;p&gt;Solutions to this are to also use human-curated materials, like books and websites, or taking a class.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;be-mindful-of-whether-you-are-truly-working-toward-your-goal&quot;&gt;Be mindful of whether you are truly working toward your goal.&lt;&#x2F;h2&gt;
+&lt;p&gt;Code snippets for more complex systems, such as embedded systems, rarely work out of the box. You will learn a lot and sharpen your problem-solving skills by making them work, but this may not always contribute to your target in a meaningful way. After all &quot;making a code snippet work&quot; and &quot;writing that code snippet&quot; are similar, but different goals.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h1&gt;
+&lt;p&gt;Generative AIs can be a great resource to help you gain new skills, but using them requires you to be very reflective about your learning process and the mechanisms they operate on. This adds additional overhead compared to classical, instruction-based education methods.&lt;&#x2F;p&gt;
+&lt;p&gt;Being aware of your learning process is valuable, but you also need the capacity for this, in addition to building the skills you set out for.&lt;&#x2F;p&gt;
+&lt;p&gt;However, learning works best when it is interest-driven, and exploring new tools and platforms definitely adds to that. So go on and find out what these resources have to offer for you! Just remember, you can&#x27;t take shortcuts to actively engaging with the subject.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Riding Overnight</title>
+          <pubDate>Sun, 11 Aug 2024 00:00:00 +0000</pubDate>
+          <author>info@transfeld.net</author>
+          <link>https://www.mirabellensaftpres.se/riding-overnight/</link>
+          <guid>https://www.mirabellensaftpres.se/riding-overnight/</guid>
+          <description xml:base="https://www.mirabellensaftpres.se/riding-overnight/">&lt;p&gt;A checklist for things to bring, that you don&#x27;t take on other long rides.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;sleep&quot;&gt;Sleep&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+bivy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+mat&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+sleeping bag&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+long pants&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+longsleave&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+hat&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+ear plugs&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+head lamp&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;body-care&quot;&gt;Body Care&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+toothbrush&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+toothpaste&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+body &amp;amp; hair wash&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+sunscreen&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+insect repellent&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+travel towel&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+tissue&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;optional&quot;&gt;Optional&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+swimsuit&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;things-to-plan-ahead&quot;&gt;Things to plan ahead&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+where to get food&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+where to get water&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+    &lt;a href=&quot;&#x2F;2024-08-11-002.jpg&quot; data-ngthumb=&quot;&#x2F;2024-08-11-002.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+&lt;&#x2F;div&gt;</description>
+      </item>
+      <item>
+          <title>Flowers</title>
+          <pubDate>Fri, 19 Jul 2024 00:00:00 +0000</pubDate>
+          <author>info@transfeld.net</author>
+          <link>https://www.mirabellensaftpres.se/flowers/</link>
+          <guid>https://www.mirabellensaftpres.se/flowers/</guid>
+          <description xml:base="https://www.mirabellensaftpres.se/flowers/">&lt;div class=&quot;gallery&quot;&gt;
+    &lt;a href=&quot;&#x2F;2024-07-19-002.jpg&quot; data-ngthumb=&quot;&#x2F;2024-07-19-002.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+    &lt;a href=&quot;&#x2F;2024-07-19-001.jpg&quot; data-ngthumb=&quot;&#x2F;2024-07-19-001.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;2024-07-19-003.jpg&quot; data-ngthumb=&quot;&#x2F;2024-07-19-003.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+    &lt;a href=&quot;&#x2F;2024-07-19-004.jpg&quot; data-ngthumb=&quot;&#x2F;2024-07-19-004.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+    &lt;a href=&quot;&#x2F;2024-07-19-005.jpg&quot; data-ngthumb=&quot;&#x2F;2024-07-19-005.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+    &lt;a href=&quot;&#x2F;2024-07-19-012.jpg&quot; data-ngthumb=&quot;&#x2F;2024-07-19-012.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;2024-07-19-007.jpg&quot; data-ngthumb=&quot;&#x2F;2024-07-19-007.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+    &lt;a href=&quot;&#x2F;2024-07-19-008.jpg&quot; data-ngthumb=&quot;&#x2F;2024-07-19-008.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+    &lt;a href=&quot;&#x2F;2024-07-19-009.jpg&quot; data-ngthumb=&quot;&#x2F;2024-07-19-009.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+    &lt;a href=&quot;&#x2F;2024-07-19-010.jpg&quot; data-ngthumb=&quot;&#x2F;2024-07-19-010.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+    &lt;a href=&quot;&#x2F;2024-07-19-011.jpg&quot; data-ngthumb=&quot;&#x2F;2024-07-19-011.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+    &lt;a href=&quot;&#x2F;2024-07-19-006.jpg&quot; data-ngthumb=&quot;&#x2F;2024-07-19-006.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+&lt;&#x2F;div&gt;
+</description>
+      </item>
+      <item>
+          <title>Riding 100k for the first time</title>
+          <pubDate>Sun, 30 Jun 2024 00:00:00 +0000</pubDate>
+          <author>info@transfeld.net</author>
+          <link>https://www.mirabellensaftpres.se/riding-100/</link>
+          <guid>https://www.mirabellensaftpres.se/riding-100/</guid>
+          <description xml:base="https://www.mirabellensaftpres.se/riding-100/">&lt;p&gt;&lt;strong&gt;CN: ED Recovery&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I originally planned to ride my first 100k sometime later this year, but the opportunity arose to do it with a group, so I did it at the end of June.&lt;&#x2F;p&gt;
+&lt;p&gt;A general recommendation is that you can ride a distance in a day that you have ridden within a week, sometime before. I never rode 100k in a week before, but several times rode distances between 85 km and 95 km. My longest distance in a day was 62 km. I am fitter than I have ever been in the last 8 years, so I considered myself ready.&lt;&#x2F;p&gt;
+&lt;p&gt;But just in case I realized I was not, part of my preparation consisted of mapping out train stations for a possible early return. The other part of the prep revolved mainly around food. Doing a ride this long requires adequate fuelling.&lt;&#x2F;p&gt;
+&lt;p&gt;The question of what to eat and when becomes especially difficult when you&#x27;re in recovery from an eating disorder. Old rules, such as eating as little as possible, eating only when hungry, or not eating calorie-dense food, make riding longer distances much harder than it needs to be.&lt;&#x2F;p&gt;
+&lt;p&gt;The picture shows the food I ended up taking.&lt;&#x2F;p&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+    &lt;a href=&quot;&#x2F;2024-06-30-002.jpg&quot; data-ngthumb=&quot;&#x2F;2024-06-30-002.jpg&quot;&gt;&lt;&#x2F;a&gt; 
+&lt;&#x2F;div&gt;
+&lt;p&gt;Not in the picture are two bread rolls and a pack of sliced cheese. Neither is the breakfast I ate before. The ride was supposed to include a cake stop in the middle, end at a food truck, and have a snack break roughly every hour. This was the plan.&lt;&#x2F;p&gt;
+&lt;p&gt;Despite taking so much food with me, I ended up seriously underfuelling myself by only eating a small fraction of it.&lt;&#x2F;p&gt;
+&lt;p&gt;What I ate:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Breakfast: 1 bowl of muesli&lt;&#x2F;li&gt;
+&lt;li&gt;First break: Banana&lt;&#x2F;li&gt;
+&lt;li&gt;Second break: 1 Clif Bar&lt;&#x2F;li&gt;
+&lt;li&gt;Third Break: 1 piece of blueberry cheesecake, 1 lemonade&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Upon leaving the café, I felt like I should eat that bread roll with cheese, but I did not.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fourth Break: Energy ball&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Approaching a hill, I thought, &quot;There’s no way I can pedal up that hill.&quot; I knew this meant I had eaten way too little and that I should REALLY eat something NOW.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fifth Break: Bread roll with cheese&lt;&#x2F;li&gt;
+&lt;li&gt;On the way until the end: 50g gummies&lt;&#x2F;li&gt;
+&lt;li&gt;End: Fried rice bowl at the food truck&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;On the train, I felt like the bowl at the food truck was just the appetizer. When I arrived home, I ate:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bread roll with cheese and a recovery shake&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;After that, I felt so disproportionately full while still not satisfied. It felt horrible and led to bad sleep. Riding 100k takes up 2000–2500 kcal in addition to your normal energy expenditure. So it&#x27;s likely twice as many calories as a normal day. You can&#x27;t and don&#x27;t have to eat that in the same day, but eating your normal amount—or even less—is not going to cut it. Trying to refill too much at once is definitely going to jam your system.&lt;&#x2F;p&gt;
+&lt;p&gt;Lessons learned:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Eat earlier&lt;&#x2F;li&gt;
+&lt;li&gt;Eat more than you think you need&lt;&#x2F;li&gt;
+&lt;li&gt;Eat before you think it&#x27;s necessary&lt;&#x2F;li&gt;
+&lt;li&gt;Definitely eat if you&#x27;re already thinking about eating (more) food&lt;&#x2F;li&gt;
+&lt;li&gt;Don’t just carry the food. Eat it.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>Being a First-Time Runner at a Running Event</title>
+          <pubDate>Tue, 28 May 2024 00:00:00 +0000</pubDate>
+          <author>info@transfeld.net</author>
+          <link>https://www.mirabellensaftpres.se/first-time-runner/</link>
+          <guid>https://www.mirabellensaftpres.se/first-time-runner/</guid>
+          <description xml:base="https://www.mirabellensaftpres.se/first-time-runner/">&lt;h2 id=&quot;i-participated-in-a-running-event-for-the-first-time-in-my-life&quot;&gt;I participated in a running event for the first time in my life.&lt;&#x2F;h2&gt;
+&lt;p&gt;After many years, I took up running again in March. After biking, which I started 1.5 years ago, and my irregular habit of swimming at least 1000 m in one go, running was the missing element that I would need to compete in a triathlon.&lt;&#x2F;p&gt;
+&lt;p&gt;Being a fat person, it&#x27;s also the hardest and scariest of the three disciplines for me. It is said that running is especially hard on the joints, and it is said that this is especially dangerous for fat folks. I still started because I knew I could stop if anything went wrong. I also committed to starting slow and remaining as slow as I needed.&lt;&#x2F;p&gt;
+&lt;p&gt;I started using Garmin&#x27;s 0 to 5k program. Three runs every week in different modes, gradually leading to 5k in four months. I usually substituted one of those runs for biking or swimming and added some strength training once a week and plenty of walks.&lt;&#x2F;p&gt;
+&lt;p&gt;After about four weeks into the training, some effects became noticeable. I was able to run 20 minutes without walking in between and started to develop visible muscles. I then got curious about running events because there must be more than just marathons and half-marathons. A charity run, &lt;a href=&quot;https:&#x2F;&#x2F;www.hope-found.org&quot;&gt;Malarathon Berlin&lt;&#x2F;a&gt; that offered a 3k run popped up just after I&#x27;d reached that mark in my training plan. The decision to participate was made instantly. I registered and paid the €15 registration fee and continued with my training plan.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;About a week and a half before the run, a new mode was added to the training plan: threshold intervals, running three minutes at maximum heart rate. I tried, but I made it only for 30 seconds per interval. Then my knee started hurting. Not badly, but noticeably. Years ago, when I first took up running, this was the end of me doing the sport, per the doctor&#x27;s advice. &quot;Running isn&#x27;t for overweight people,&quot; he said, and unlike today, I was just a few kilos above what was considered normal. No physical therapy recommendation, no strength training recommendation. Just the message that people like me should basically just swim and first and foremost lose weight. Today I know that this was medical fat-shaming at its finest. And today I also know that pain during exercise is no reason to drop a sport, but all the reason to shift down a gear and look for strength training. Since I already did strength training and other disciplines, I decided to just ditch those threshold runs for now. And surprise: no more knee pain.&lt;&#x2F;p&gt;
+&lt;p&gt;I ran my first 3k about a week before the event, pain-free, and took the next few days a bit slower. Also, the temperature dropped immensely during that week. For the event, morning temperatures of about 5ºC and strong winds were expected. Nothing like my training conditions. Luckily, I have experience with biking in winter and own appropriate clothes.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;The night before the race day, I prepared the following items:&lt;&#x2F;p&gt;
+&lt;p&gt;Things to wear:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;warming baselayer&lt;&#x2F;li&gt;
+&lt;li&gt;long-sleeved running shirt with hand covers&lt;&#x2F;li&gt;
+&lt;li&gt;fleece jacket&lt;&#x2F;li&gt;
+&lt;li&gt;long, thicker running leggings&lt;&#x2F;li&gt;
+&lt;li&gt;socks&lt;&#x2F;li&gt;
+&lt;li&gt;running shoes&lt;&#x2F;li&gt;
+&lt;li&gt;merino buff&lt;&#x2F;li&gt;
+&lt;li&gt;cotton hat&lt;&#x2F;li&gt;
+&lt;li&gt;sports bra and well-fitting underwear&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Other items:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;winter jacket (for waiting)&lt;&#x2F;li&gt;
+&lt;li&gt;a bottle with a homemade WHO-ORS-like drink&lt;&#x2F;li&gt;
+&lt;li&gt;a Clif bar&lt;&#x2F;li&gt;
+&lt;li&gt;phone&lt;&#x2F;li&gt;
+&lt;li&gt;headphones&lt;&#x2F;li&gt;
+&lt;li&gt;registration confirmation (digital)&lt;&#x2F;li&gt;
+&lt;li&gt;fitness tracker&lt;&#x2F;li&gt;
+&lt;li&gt;another sweater&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Things that were provided:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;starting number and safety pins&lt;&#x2F;li&gt;
+&lt;li&gt;fruit and water after the run&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I also took care to eat enough, drink plenty of water, and not go to bed too late.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;On race day, I had my usual breakfast of oatmeal with fruit and coffee. I planned to be on location just in time when the registration opened, which was at 9:00, roughly an hour before the run started. It was freezing cold with the sun shining.&lt;&#x2F;p&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+    &lt;a href=&quot;&#x2F;2024-04-26-004.jpg&quot; data-ngthumb=&quot;&#x2F;2024-04-26-004.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;2024-04-26-005.jpg&quot; data-ngthumb=&quot;&#x2F;2024-04-26-005.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;2024-04-26-006.jpg&quot; data-ngthumb=&quot;&#x2F;2024-04-26-006.jpg&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;On-site, the registration went quickly, and then the waiting started. I was SO glad I took the winter jacket with me. Most of the participants came so late that the race start was postponed by 15 minutes. Then things went quickly. First, the children&#x27;s race. Then everyone else started to line up. I left the winter jacket with my partner but kept the fleece jacket on. I was in the first row but suddenly thought it might be a good idea to move to the back, as I would probably start much slower compared to most folks. The run started!&lt;&#x2F;p&gt;
+&lt;p&gt;Moving to the back proved to be an excellent measure. I knew I was slow, but I had no idea how fast most other people were. I had to force myself not to even try to adapt to their speed while pushing thoughts of inferiority away. At the same time, my body felt stiff and cold and begged me to stop running. My feet were freezing!!&lt;&#x2F;p&gt;
+&lt;p&gt;After the first couple of hundred meters, I started to feel a stitch. Something I didn&#x27;t remember having since school sports. Back then, when pacing wasn&#x27;t taught. Running was just about being fast in that instance, rarely about building a sustainable pace. Back then, I associated running with pain, not with something that can bring fun even remotely.&lt;&#x2F;p&gt;
+&lt;p&gt;I reduced my pace and concentrated on breathing regularly, deeply enough, and relaxing. It took a bit of time, but the pain subsided. I was also finally warm enough to run comfortably. By now, the field of runners was mostly out of view. There were only a handful of runners with whom I stayed until the end.&lt;&#x2F;p&gt;
+&lt;p&gt;At around 1500 m, I was warm enough to get rid of the fleece jacket. The sun was awesome, the sky was bright, and I ran. In a very uneventful way. No more stitches, and also my knee felt fine. Sometimes I was overtaken by someone, at other times, I overtook someone else. Always going steady.&lt;&#x2F;p&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+    &lt;a href=&quot;&#x2F;2024-04-26-002.jpg&quot; data-ngthumb=&quot;&#x2F;2024-04-26-002.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;2024-04-26-007.jpg&quot; data-ngthumb=&quot;&#x2F;2024-04-26-007.jpg&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;Suddenly I noticed that something was off. I was approaching 2500 m, and the finish line seemed way farther away than 500 m. Nevertheless, I kept going, keeping my steady pace. Let myself get surprised by how far the finish line is.&lt;&#x2F;p&gt;
+&lt;p&gt;At around 3000 m, still far away from the finish line, I felt so warm that I needed to get rid of my hat. I stowed it in my pocket. (Yay, pockets!) Our little group of four runners was still around. Some sometimes walked without losing much pace. Sometimes one was faster, sometimes another.&lt;&#x2F;p&gt;
+&lt;p&gt;Approaching 3500 m (3500?!?!? m), the finish line finally looked like it was actually in reach. And I was still running. I had not walked a single step. I had already exceeded what I thought was my maximum, but I had not even reached the finish line yet. As we got closer to it, more and more people stood by and cheered. Our group was scattered a bit more; I lost sight of one person completely. But I kept my pace and ran steadily.&lt;&#x2F;p&gt;
+&lt;p&gt;I saw my partner. She cheered for every runner on the way. It was now only about a hundred meters left. I was cheered on by many people and finally crossed the finish line. Wow. 4200 m. And my body felt like I could have gone the full 5k. Amazing.&lt;&#x2F;p&gt;
+&lt;p&gt;I picked up the fruit and drank the drink I brought. I wasn&#x27;t really hungry, but still ate the banana because it made sense to eat it. My body was okay with it. I picked up my medal and went home pretty much straight away.&lt;&#x2F;p&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+    &lt;a href=&quot;&#x2F;2024-04-26-008.jpg&quot; data-ngthumb=&quot;&#x2F;2024-04-26-008.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;2024-04-26-003.jpg&quot; data-ngthumb=&quot;&#x2F;2024-04-26-003.jpg&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;now-that-a-month-has-passed-what-s-left&quot;&gt;Now that a month has passed, what&#x27;s left?&lt;&#x2F;h2&gt;
+&lt;p&gt;I am still running! Right after the event, I felt very tired for a couple of days and decided to take things a bit slower for a while. I have ditched the training plan almost completely. The reason was that it was optimizing for speed, and I think I need to go way slower with training. But I do 1-2 runs each week, between 2 and 5 km each, depending on how I feel and the weather conditions. Taking things a bit slower has increased my speed and endurance more than more training could do. I also figured that if I want to go longer than that or in even warmer weather, I need to start bringing water and food. Adding logistics to a sport that - in moderation - can do well without.&lt;&#x2F;p&gt;
+&lt;p&gt;In terms of the race: I would totally do it again. Now that I have crossed the 5k mark, there are many more regular options for running events, and you can bet I will do another one. I think I was well-prepared in terms of training and what equipment to bring. The feeling of everyone running away at the start and the urge to keep up was something I didn&#x27;t consider. In my tracking, this came up as one of the fastest stretches I ever ran, but it was probably the cause of my stitch. I think it&#x27;s extremely important to focus on yourself and your pace, if only to avoid having to deal with pain.&lt;&#x2F;p&gt;
+&lt;p&gt;Thank you, &lt;a href=&quot;http:&#x2F;&#x2F;roell.net&quot;&gt;Juliane Röll&lt;&#x2F;a&gt; for being with me through this and for the cool pictures!&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>A Full Sketch Book</title>
+          <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+          <author>info@transfeld.net</author>
+          <link>https://www.mirabellensaftpres.se/full-sketchbook/</link>
+          <guid>https://www.mirabellensaftpres.se/full-sketchbook/</guid>
+          <description xml:base="https://www.mirabellensaftpres.se/full-sketchbook/">&lt;p&gt;Today I am celebrating this tiny 10 cm x 10 cm spiral sketchbook. By now I have finished a lot of sketchbooks, but this one is kind of special to me. I learned a lot while filling it.&lt;&#x2F;p&gt;
+&lt;!-- &lt;div &gt;
+    &lt;iframe
+        src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;uBZ6jhm7Uig&quot;
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen&gt;
+    &lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt; --&gt;
+
+&lt;div &gt;
+    &lt;iframe src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;uBZ6jhm7Uig&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen height=&quot;360&quot; width=&quot;420&quot;&gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;Despite the usual recommendation to go big, this tiny format served me really well. I can work in it on a desk that is filled with other work, it doesn&#x27;t take up much space when it needs to dry.&lt;&#x2F;p&gt;
+&lt;p&gt;Due to its size, the amount of materials needed is also rather small. Perfect for trying out new things, such as new paints and structure pastes.&lt;&#x2F;p&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+    &lt;!-- &lt;a href=&quot;&#x2F;2023-12-31-002.jpg&quot; data-ngthumb=&quot;&#x2F;2023-12-31-002.jpg&quot;&gt;&lt;&#x2F;a&gt; --&gt;
+    &lt;a href=&quot;&#x2F;2023-12-31-003.jpg&quot; data-ngthumb=&quot;&#x2F;2023-12-31-003.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;2023-12-31-004.jpg&quot; data-ngthumb=&quot;&#x2F;2023-12-31-004.jpg&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;The principles of layering and composition that I learned while settling into the process are still perfectly transferrable to bigger works. I felt way more comfortable working on bigger pieces after filling a portion of the sketchbook and the work was a lot more intuitive.&lt;&#x2F;p&gt;
+&lt;p&gt;I have now a signature mark that I developed in this sketchbook. &quot;Mark&quot; refers to a usually line based pattern that is added to abstract works. Marks are contrasting to elements that are more flat, such as painted areas or areas covered by collage paper. Marks are more intentionally than lines that form by themselves, such as paint pooling in cracks or granulating watercolors.&lt;&#x2F;p&gt;
+&lt;p&gt;While I really like bright colors, and they play an important role in my work, I got a new sense of appreciation for colors that are not bright, such as Sepia brown and Titanium Buff. I am just beginning to grasp the role that white plays in my work.&lt;&#x2F;p&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+    &lt;a href=&quot;&#x2F;2023-12-31-005.jpg&quot; data-ngthumb=&quot;&#x2F;2023-12-31-005.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;2024-02-10-001.jpg&quot; data-ngthumb=&quot;&#x2F;2024-02-10-001.jpg&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;Speaking of acrylic paint. I was never a fan of acrylic paint beyond that it is more practical in terms of fumes. But through this work I not only found a brand that I like, acrylic paints also play a crucial role in the process: they can be layered on almost any underground, and most things can be layered onto them. Even water color (with a little help of mediums).&lt;&#x2F;p&gt;
+&lt;p&gt;Through this experience, I have built quite a repertoire of sources of collage paper. Hand painted or drawn, found books and prints, gel prints, plotted papers and the odd butcher and wrapping paper.&lt;&#x2F;p&gt;
+&lt;p&gt;Off to the next sketchbook!&lt;&#x2F;p&gt;
+&lt;!-- Support this work or buy my art works over at  --&gt;
+&lt;!-- &lt;a href=&#x27;https:&#x2F;&#x2F;ko-fi.com&#x2F;S6S0N8I4U&#x27; target=&#x27;_blank&#x27;&gt;&lt;img height=&#x27;36&#x27; style=&#x27;border:0px;height:36px;&#x27; src=&#x27;https:&#x2F;&#x2F;storage.ko-fi.com&#x2F;cdn&#x2F;kofi5.png?v=3&#x27; border=&#x27;0&#x27; alt=&#x27;Buy Me a Coffee at ko-fi.com&#x27; &#x2F;&gt;&lt;&#x2F;a&gt; --&gt;
+</description>
+      </item>
+      <item>
+          <title>Computational, Generative or Algorithmic Art and Threshold of Originality.</title>
+          <pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate>
+          <author>info@transfeld.net</author>
+          <link>https://www.mirabellensaftpres.se/computational/</link>
+          <guid>https://www.mirabellensaftpres.se/computational/</guid>
+          <description xml:base="https://www.mirabellensaftpres.se/computational/">&lt;p&gt;Earlier last year, I talked to a former teacher of mine about my plans of making generative art with a pen plotter. She was not amused. I didn&#x27;t understand, she elaborated. During that time, the writer guilds were striking in Hollywood, among other things against the use of ChatGPT for generating scripts. And making &quot;generative&quot; art sounded to her like I was invested in creating some sort of model that fed on other artists&#x27; work without compensation them and finally replacing them. I also failed to give her an understanding, that despite the term, I was doing nothing of the sort.&lt;&#x2F;p&gt;
+&lt;p&gt;One of the reasons I failed was definitely that I was short of terminology. Also, a quick google search gave me no easy and distinct answer, rather many opinions and contradictions. So I unironically asked ChatGPT as expert witness for distinction of the three terms computational, generative and algorithmic art, and how they relate to text-to-image models. I also asked it about the threshold of originality concerning all of these.&lt;&#x2F;p&gt;
+&lt;p&gt;While the answer makes sense and feels correct, and probably is not completely off, I have a bitter after-taste about the experience. A Google search that does not reveal a definite answer means: it&#x27;s not that simple. After all it takes time and discourse to shape terms. And this is portrayed in the search result. ChatGPT distills the statistically most likely answer out of this question. I noticed, how this answer feels more correct in my head, just because it was easier to read and more comprehensive than a quick google search.&lt;&#x2F;p&gt;
+&lt;p&gt;ChatGPT provides a new form of reduction and simplification. While reductions of complexity are necessary, they are not easy to do and still often stay in people&#x27;s memories as the full thing. Human made reductions usually come from a conscious compromise, ChatGPT is based on statistical models. I can&#x27;t say yet if this is bad by itself, but it certainly can&#x27;t hurt to keep that in mind. Especially the fact, that the comprehensiveness and eloquence of an answer does not make it the more correct answer.&lt;&#x2F;p&gt;
+&lt;p&gt;Ironically, you can read the output as interview below.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;user&quot;&gt;User&lt;&#x2F;h2&gt;
+&lt;p&gt;What is the difference between Computational, Generative and Algorithmic Art?&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;chatgpt&quot;&gt;ChatGPT&lt;&#x2F;h2&gt;
+&lt;p&gt;Computational, generative, and algorithmic art are related but distinct fields within the realm of digital and computer-based art creation.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Computational Art:&lt;&#x2F;strong&gt; This refers to art that is created using computational processes or systems. It involves the use of computer programming, software, and technology as integral parts of the artistic creation process. Computational artists often write code or use algorithms to generate visual or interactive art forms. This field encompasses a wide range of artistic expressions, from algorithmically generated images to interactive installations driven by software.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Generative Art:&lt;&#x2F;strong&gt; Generative art is a subset of computational art that specifically focuses on creating art that has some degree of autonomy or is self-sustaining. Artists in this field write algorithms or create systems that produce artwork autonomously, often with a degree of randomness or variability built into the process. Generative art often explores the relationship between the artist, the code or system they create, and the resulting artwork, sometimes allowing for emergent or unpredictable outcomes.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Algorithmic Art:&lt;&#x2F;strong&gt; Algorithmic art emphasizes the role of algorithms in the creation of artwork. It involves the use of step-by-step procedures or rules to generate artistic output. This can include visual art, music, or other creative forms. Artists in this field design algorithms that dictate how elements are arranged, combined, or manipulated to produce the final artwork.&lt;&#x2F;p&gt;
+&lt;p&gt;In essence, computational art is a broad term encompassing art created through computational means, while generative and algorithmic art are specific approaches within this domain, focusing on self-sustaining or autonomous artwork and the use of algorithms, respectively. These fields often overlap, and many artists may utilize elements from all three in their creative processes.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;user-1&quot;&gt;User&lt;&#x2F;h2&gt;
+&lt;p&gt;How does generating images with text-to-image models relate to the above concepts, especially regarding threshold of originality?&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;chatgpt-1&quot;&gt;ChatGPT&lt;&#x2F;h2&gt;
+&lt;p&gt;Generating images with text-to-image models like OpenAI&#x27;s DALL-E or similar systems involves using machine learning algorithms to create visual content based on textual descriptions. These models are a fusion of natural language understanding and image generation capabilities, often leveraging large datasets to learn the relationships between words and visual concepts.&lt;&#x2F;p&gt;
+&lt;p&gt;Regarding the concepts of computational, generative, and algorithmic art:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Computational Art:&lt;&#x2F;strong&gt; Image generation through text-to-image models falls within the realm of computational art. These models use complex computational processes, such as deep neural networks, to generate images based on input text. Artists or users provide textual descriptions, and the computational system interprets and generates corresponding visual representations.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Generative Art:&lt;&#x2F;strong&gt; Text-to-image models can be considered a form of generative art as they autonomously create images based on textual input. The models have the ability to generate diverse, sometimes surprising, visual outputs from descriptive text, showcasing an element of autonomy and creativity.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Algorithmic Art:&lt;&#x2F;strong&gt; While text-to-image models use complex algorithms and neural network architectures, they might not strictly adhere to traditional algorithmic art principles where specific step-by-step procedures or rules are designed by the artist. However, the underlying functioning of these models involves algorithmic processes to interpret language and generate visuals, making them relevant to the algorithmic art domain.
+Regarding the threshold of originality, it&#x27;s an important legal concept in copyright law. In art created using text-to-image models, the question of originality can be complex. While the AI system generates the visuals, the input and guidance come from a human. Whether the resulting image meets the threshold of originality, and hence qualifies for copyright protection, may depend on various factors including the level of creativity involved in crafting the input description and the degree of human involvement in shaping the final output.&lt;&#x2F;p&gt;
+&lt;p&gt;As of now, legal and philosophical discussions are ongoing to determine how copyright laws apply to AI-generated art. The involvement of human creativity in generating input, curating outputs, or providing direction to AI systems remains a critical aspect in determining the originality and copyright of AI-generated artworks.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;user-2&quot;&gt;User&lt;&#x2F;h2&gt;
+&lt;p&gt;How does the threshold of originality apply to works created with computational methods but without text-to-image models?&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;chatgpt-2&quot;&gt;ChatGPT&lt;&#x2F;h2&gt;
+&lt;p&gt;The threshold of originality is a crucial legal concept in copyright law that determines whether a work qualifies for copyright protection. It assesses the minimum level of creativity and originality required for a work to be eligible for copyright.&lt;&#x2F;p&gt;
+&lt;p&gt;In the context of works created using computational methods (but without text-to-image models), the application of the threshold of originality remains pertinent. These works may include computer-generated art, algorithmically generated music, procedurally generated content in games, and more.&lt;&#x2F;p&gt;
+&lt;p&gt;The determination of whether such works meet the threshold of originality can be complex and may involve several considerations:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Human Creativity and Input:&lt;&#x2F;strong&gt; Even though computational methods are used to generate these works, the degree of human creativity and input involved plays a crucial role. If the process involves substantial creative decisions or inputs from a human creator, it&#x27;s more likely to meet the threshold.
+Level of Automation vs. Human Intervention: If the computational process is entirely autonomous, with minimal or no human input beyond setting initial parameters, it might be challenging to establish the required level of human creativity for copyright protection.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Artistic Expression and Uniqueness:&lt;&#x2F;strong&gt; The uniqueness, originality, and expressive elements of the resulting work are also evaluated. If the output demonstrates distinctive artistic expression, deviation from generic outputs, or reflects the creator&#x27;s personality or style, it could support meeting the threshold of originality.
+Complexity and Novelty of the Computational Process: The complexity of the computational process used and its novelty can also influence the determination. Innovative algorithms or unique computational methods that produce unexpected or novel outcomes may contribute to meeting the threshold.&lt;&#x2F;p&gt;
+&lt;p&gt;In summary, the application of the threshold of originality to works created through computational methods involves examining the extent of human creativity, the level of human input, the uniqueness of the output, and the complexity of the process. Courts and legal systems often evaluate these factors on a case-by-case basis when determining copyright eligibility for works created using computational means.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;user-3&quot;&gt;User&lt;&#x2F;h2&gt;
+&lt;p&gt;Do you think an image created with a text-to-image model can ever have the same threshold of originality as, let&#x27;s say a painting by Picasso?&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;chatgpt-3&quot;&gt;ChatGPT&lt;&#x2F;h2&gt;
+&lt;p&gt;The concept of originality in art is nuanced and can be influenced by various factors, including creativity, human intent, and cultural context. Comparing an image created by a text-to-image model to a painting by a renowned artist like Picasso involves considering several aspects:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Creativity and Intent:&lt;&#x2F;strong&gt; Picasso&#x27;s paintings are a product of his creative vision, artistic skills, and intentional expression. They reflect his unique style, emotions, and ideas. On the other hand, images generated by text-to-image models rely on computational algorithms trained on datasets and lack a direct emotional or intentional human expression.
+Human Involvement: Picasso&#x27;s paintings are a result of his personal decisions, experiences, and artistic choices. In contrast, while humans provide textual prompts for text-to-image models, the actual image generation process is primarily driven by computational algorithms without direct human intervention in the creation of each pixel or stroke.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Cultural and Historical Context:&lt;&#x2F;strong&gt; Picasso&#x27;s artworks often carry significant cultural and historical value. They are part of a larger narrative within the art world, influenced by the artist&#x27;s time, movements, and societal context. AI-generated images, while innovative, lack this historical and cultural depth.
+Considering these factors, it&#x27;s challenging for an image created by a text-to-image model to achieve the same level of originality as a masterpiece by Picasso or other renowned artists. While AI-generated art can be impressive and innovative, it lacks the deeply personal and intentional human expression, artistic context, and historical significance associated with works by acclaimed artists like Picasso.&lt;&#x2F;p&gt;
+&lt;p&gt;However, the perception of originality and artistic value might evolve as technology progresses, and societal attitudes toward AI-generated art shift. Debates around the role of AI in creativity and its place in the art world continue, raising questions about the nature of authorship, creativity, and the definition of originality in the context of machine-generated art.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;user-4&quot;&gt;User&lt;&#x2F;h2&gt;
+&lt;p&gt;Thank you for your time.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;chatgpt-4&quot;&gt;ChatGPT&lt;&#x2F;h2&gt;
+&lt;p&gt;You&#x27;re welcome! If you have more questions or need further assistance in the future, feel free to reach out. Have a great day!&lt;&#x2F;p&gt;
+&lt;!-- Support this work or buy my art works over at 
+
+&lt;a href=&#x27;https:&#x2F;&#x2F;ko-fi.com&#x2F;S6S0N8I4U&#x27; target=&#x27;_blank&#x27;&gt;&lt;img height=&#x27;36&#x27; style=&#x27;border:0px;height:36px;&#x27; src=&#x27;https:&#x2F;&#x2F;storage.ko-fi.com&#x2F;cdn&#x2F;kofi5.png?v=3&#x27; border=&#x27;0&#x27; alt=&#x27;Buy Me a Coffee at ko-fi.com&#x27; &#x2F;&gt;&lt;&#x2F;a&gt; --&gt;
+</description>
+      </item>
+      <item>
+          <title>star_burst</title>
+          <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
+          <author>info@transfeld.net</author>
+          <link>https://www.mirabellensaftpres.se/star-burst/</link>
+          <guid>https://www.mirabellensaftpres.se/star-burst/</guid>
+          <description xml:base="https://www.mirabellensaftpres.se/star-burst/">&lt;p&gt;After over a month of some planning and programming and debugging graphic output, my first series is finished. This series explores how the rules of three compositional layers interact with each other, when most other parameters are randomized.&lt;&#x2F;p&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+    &lt;a href=&quot;&#x2F;star_burst_01.jpg&quot; data-ngthumb=&quot;&#x2F;star_burst_01.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;star_burst_02.jpg&quot; data-ngthumb=&quot;&#x2F;star_burst_02.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;star_burst_03.jpg&quot; data-ngthumb=&quot;&#x2F;star_burst_03.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;star_burst_04.jpg&quot; data-ngthumb=&quot;&#x2F;star_burst_04.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;star_burst_05.jpg&quot; data-ngthumb=&quot;&#x2F;star_burst_05.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;star_burst_06.jpg&quot; data-ngthumb=&quot;&#x2F;star_burst_06.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;star_burst_07.jpg&quot; data-ngthumb=&quot;&#x2F;star_burst_07.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;star_burst_08.jpg&quot; data-ngthumb=&quot;&#x2F;star_burst_08.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;star_burst_09.jpg&quot; data-ngthumb=&quot;&#x2F;star_burst_09.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;star_burst_10.jpg&quot; data-ngthumb=&quot;&#x2F;star_burst_10.jpg&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;!-- Support this work or buy my art works over at 
+
+&lt;a href=&#x27;https:&#x2F;&#x2F;ko-fi.com&#x2F;S6S0N8I4U&#x27; target=&#x27;_blank&#x27;&gt;&lt;img height=&#x27;36&#x27; style=&#x27;border:0px;height:36px;&#x27; src=&#x27;https:&#x2F;&#x2F;storage.ko-fi.com&#x2F;cdn&#x2F;kofi5.png?v=3&#x27; border=&#x27;0&#x27; alt=&#x27;Buy Me a Coffee at ko-fi.com&#x27; &#x2F;&gt;&lt;&#x2F;a&gt; --&gt;
+</description>
+      </item>
+      <item>
+          <title>Sanguine</title>
+          <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+          <author>info@transfeld.net</author>
+          <link>https://www.mirabellensaftpres.se/sanguine/</link>
+          <guid>https://www.mirabellensaftpres.se/sanguine/</guid>
+          <description xml:base="https://www.mirabellensaftpres.se/sanguine/">&lt;p&gt;Sanguine or red chalk is a mineral pigment made of clay and hematite (Fe&lt;sub&gt;2&lt;&#x2F;sub&gt;O&lt;sub&gt;3&lt;&#x2F;sub&gt;). It is deep red in color and has been used for artistic expression already by the neanderthals. Since the renaissance it has been shaped into a kind of pencil, used mainly for sketches similar to graphite pencils today.&lt;&#x2F;p&gt;
+&lt;p&gt;The goal is to build a framework for generative art for pen plotters in Rust.&lt;&#x2F;p&gt;
+&lt;p&gt;Some features I have in mind:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;generate art as svg&lt;&#x2F;li&gt;
+&lt;li&gt;parse a limited number of shapes from svg files (WIP).&lt;&#x2F;li&gt;
+&lt;li&gt;add more organic ways to generate images, such as voronoi diagrams&lt;&#x2F;li&gt;
+&lt;li&gt;adapt composition things to work with voronoi diagrams (WIP)&lt;&#x2F;li&gt;
+&lt;li&gt;experiment with L-systems.&lt;&#x2F;li&gt;
+&lt;li&gt;add noise generator&lt;&#x2F;li&gt;
+&lt;li&gt;add camera input, so the generated art can be a reaction to what already is on paper.&lt;&#x2F;li&gt;
+&lt;li&gt;project layout that allows for easy transitions between creating art work with lots of predefined functions, writing custom parts for the frame work and switching between different works of art.&lt;&#x2F;li&gt;
+&lt;li&gt;generate art without svg output, by addressing the pen plotter directly&lt;&#x2F;li&gt;
+&lt;li&gt;input from hardware rngs&lt;&#x2F;li&gt;
+&lt;li&gt;Docs and Website&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;You can also follow the project over at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Mirabellensaft&#x2F;sanguine&quot;&gt;github&lt;&#x2F;a&gt;. Output that I do consider art will also be posted at &lt;a href=&quot;https:&#x2F;&#x2F;www.instagram.com&#x2F;tanks_transfeld&#x2F;&quot;&gt;instagram&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;!-- Support this work or buy my art works over at 
+
+&lt;a href=&#x27;https:&#x2F;&#x2F;ko-fi.com&#x2F;S6S0N8I4U&#x27; target=&#x27;_blank&#x27;&gt;&lt;img height=&#x27;36&#x27; style=&#x27;border:0px;height:36px;&#x27; src=&#x27;https:&#x2F;&#x2F;storage.ko-fi.com&#x2F;cdn&#x2F;kofi5.png?v=3&#x27; border=&#x27;0&#x27; alt=&#x27;Buy Me a Coffee at ko-fi.com&#x27; &#x2F;&gt;&lt;&#x2F;a&gt; --&gt;
+</description>
+      </item>
+      <item>
+          <title>Gewandtheit, Fatzke!*</title>
+          <pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
+          <author>info@transfeld.net</author>
+          <link>https://www.mirabellensaftpres.se/fatzke/</link>
+          <guid>https://www.mirabellensaftpres.se/fatzke/</guid>
+          <description xml:base="https://www.mirabellensaftpres.se/fatzke/">&lt;p&gt;*agility, pompous! (Rough translation of the German derogatory term Fatzke, meaning arrogant person.) Two words on two dictionary pages that ended up next to each other in a prominent place in a collage. Or rather should have ended up there, and are now barely visible.&lt;&#x2F;p&gt;
+&lt;p&gt;I like working with found books. I prefer non-fiction, collections of information, tables, lists, formulas and scientific illustrations. Preferably older editions. I like how the type fonts are just different from what we&#x27;re used to today. I like old paper. Usually I take pieces out of the books and glue them to artist grade paper or canvases. I use a lot of acrylic binder in the process, so the old paper is basically encased in plastic, once dried. I paint over them with all sorts of paints and colors, so they only appear in traces in the finished work and are well worked in and safe. But sometimes I experiment.&lt;&#x2F;p&gt;
+&lt;p&gt;I painted directly on the wet dictionary pages, with homemade walnut ink. With acrylic paint. With more liquid acrylic paint and Chinese ink. I let the sheets dry. The tape I used to mount the pages was already hard to get off without ripping the delicate, flimsy dictionary paper apart. It was also the strong tape, the one that&#x27;s water-resistant. Not the one for delicate papers.&lt;&#x2F;p&gt;
+&lt;p&gt;In the next step, I wanted to cut the pages into pieces and stick the pieces together in a new way to make a piece about the size of one page. I cut the pages, taped the new edges together, so they stay aligned. I repeated this step a couple of times, wanting to keep it short to not let the tape stick longer then necessary. I cut the outer edges and glued the piece to more sturdy piece of paper.&lt;&#x2F;p&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+    &lt;a href=&quot;&#x2F;2023-10-16-001.jpg&quot; data-ngthumb=&quot;&#x2F;2023-10-16-001.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;2023-10-16-002.jpg&quot; data-ngthumb=&quot;&#x2F;2023-10-16-002.jpg&quot;&gt;&lt;&#x2F;a&gt;
+    &lt;a href=&quot;&#x2F;2023-10-16-003.jpg&quot; data-ngthumb=&quot;&#x2F;2023-10-16-003.jpg&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;Upon pulling the tape, when the piece was dry, the paper surface ripped off with the tape. No more Fatzke. No more clean cut edges.&lt;&#x2F;p&gt;
+&lt;p&gt;What now? I liked the process a lot. I can envision, what this would have looked like, and like the image in front of my mental eye. I like how the sharp cut edges disturb the flow of my painted lines, blobs and marks and how they continue, on the other side of the edge with a little offset. How this pattern also is visible in the dictionary page, how words come together. Gewandtheit, Fatzke!&lt;&#x2F;p&gt;
+&lt;p&gt;Taking a closer look, I figured that the paper ripped exactly in the spots where there was no acrylic paint, but where the paper was probably not only damaged by age but by the wet technique. Covering the entire peace with acrylic binder may protect it, alone because tape can be removed easier from smooth surfaces. Next time.&lt;&#x2F;p&gt;
+&lt;!-- Support this work or buy my art works over at 
+
+&lt;a href=&#x27;https:&#x2F;&#x2F;ko-fi.com&#x2F;S6S0N8I4U&#x27; target=&#x27;_blank&#x27;&gt;&lt;img height=&#x27;36&#x27; style=&#x27;border:0px;height:36px;&#x27; src=&#x27;https:&#x2F;&#x2F;storage.ko-fi.com&#x2F;cdn&#x2F;kofi5.png?v=3&#x27; border=&#x27;0&#x27; alt=&#x27;Buy Me a Coffee at ko-fi.com&#x27; &#x2F;&gt;&lt;&#x2F;a&gt; --&gt;
+</description>
+      </item>
+      <item>
+          <title>About</title>
+          <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+          <author>info@transfeld.net</author>
+          <link>https://www.mirabellensaftpres.se/about/</link>
+          <guid>https://www.mirabellensaftpres.se/about/</guid>
+          <description xml:base="https://www.mirabellensaftpres.se/about/">&lt;h1 id=&quot;about&quot;&gt;About&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;who-am-i&quot;&gt;Who am I?&lt;&#x2F;h2&gt;
+&lt;p&gt;My name is Tanks, I am a chemist, artist and coder. I love cooking, gardening and biking and usually life is too busy to give all of these shenanigans enough room, but I try.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-is-this&quot;&gt;What is this?&lt;&#x2F;h2&gt;
+&lt;p&gt;&quot;The internet&quot; is moving away from centralized social media. What was once Twitter is now X and a rich dudes personal playground, Instagram mutated to be a TikTok clone, and TikTok is questionable for many other reasons. Facebook is barely usable for ads and the most random click bait. Time to be steward of my own content again, basically like we already did more than 20 years ago. Just with way nicer tools and better out of the box design.&lt;&#x2F;p&gt;
+&lt;p&gt;Don&#x27;t expect regular or frequent updates, but allow yourself to get surprised. I&#x27;ll post about things I&#x27;ll make, and maybe even some writing. Who knows!&lt;&#x2F;p&gt;
+&lt;!-- ## Support Me!
+
+You can buy my art or send me a coffee if you like my work!
+
+&lt;a href=&#x27;https:&#x2F;&#x2F;ko-fi.com&#x2F;S6S0N8I4U&#x27; target=&#x27;_blank&#x27;&gt;&lt;img height=&#x27;36&#x27; style=&#x27;border:0px;height:36px;&#x27; src=&#x27;https:&#x2F;&#x2F;storage.ko-fi.com&#x2F;cdn&#x2F;kofi5.png?v=3&#x27; border=&#x27;0&#x27; alt=&#x27;Buy Me a Coffee at ko-fi.com&#x27; &#x2F;&gt;&lt;&#x2F;a&gt; --&gt;
+&lt;h2 id=&quot;other-places-where-you-can-find-me&quot;&gt;Other Places where you can find me&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a rel=&quot;me&quot; href=&quot;https:&#x2F;&#x2F;mastodon.art&#x2F;@Mirabellensaft&quot;&gt;Mastodon&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Impressum</title>
+          <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+          <author>info@transfeld.net</author>
+          <link>https://www.mirabellensaftpres.se/impressum/</link>
+          <guid>https://www.mirabellensaftpres.se/impressum/</guid>
+          <description xml:base="https://www.mirabellensaftpres.se/impressum/">&lt;h1 id=&quot;angaben-gemass-ss-5-tmg&quot;&gt;Angaben gemäß § 5 TMG&lt;&#x2F;h1&gt;
+&lt;p&gt;Tanks Transfeld&lt;&#x2F;p&gt;
+&lt;p&gt;Kantstr. 105&lt;&#x2F;p&gt;
+&lt;p&gt;10627 Berlin&lt;&#x2F;p&gt;
+&lt;p&gt;info@transfeld.net&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;verantwortlich-fur-den-inhalt-nach-ss-55-abs-2-rstv&quot;&gt;Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:&lt;&#x2F;h1&gt;
+&lt;p&gt;Tanks Transfeld&lt;&#x2F;p&gt;
+&lt;p&gt;Kantstr. 105&lt;&#x2F;p&gt;
+&lt;p&gt;10627 Berlin&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;haftungsausschluss&quot;&gt;Haftungsausschluss:&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;haftung-fur-inhalte&quot;&gt;Haftung für Inhalte&lt;&#x2F;h2&gt;
+&lt;p&gt;Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;haftung-fur-links&quot;&gt;Haftung für Links&lt;&#x2F;h2&gt;
+&lt;p&gt;Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;urheberrecht&quot;&gt;Urheberrecht&lt;&#x2F;h1&gt;
+&lt;p&gt;Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;datenschutz&quot;&gt;Datenschutz&lt;&#x2F;h1&gt;
+&lt;p&gt;Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.
+Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
+Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.&lt;&#x2F;p&gt;
+&lt;p&gt;Website Impressum erstellt durch &lt;a href=&quot;https:&#x2F;&#x2F;www.impressum-generator.de&quot;&gt;impressum-generator.de&lt;&#x2F;a&gt; von der &lt;a href=&quot;https:&#x2F;&#x2F;www.kanzlei-hasselbach.de&#x2F;&quot;&gt;Kanzlei Hasselbach&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>
