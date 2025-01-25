@@ -9,19 +9,17 @@ Recently I was asked how I debug my generated images, and if I render them often
 
 The Answer: I always render an image when I run the code. It's just part of the process. Whether I focus on the images or the console output depends on what I'm debugging. It also depends a bit on my mood—sometimes I go for a trial-and-error approach, other times I do the calculations in my head or on paper.
 
-Another thing I do is take the lines I generate apart in Inkscape. That way, I can check what I’ve actually created and see if it matches what I intended.
+Another thing I do is take the lines I generate apart in [Inkscape](https://inkscape.org/de/). That way, I can check what I’ve actually created and see if it matches what I intended.
 
 <div class="gallery"> <a href="/veranator/nr_000_20250125_192023.png" data-ngthumb="/veranator/nr_000_20250125_192023.png"></a> </div>
 
 I wanted to make a 3x3 grid of concentric squares. For some reason—still unknown at the time—I didn’t get a proper 3x3 grid. Instead, I only got the first square from the first row, the second from the second row, and the third from the third row.
 
-First, I focused on getting the single shape right using the above-mentioned trial-and-error method. I was particularly not in the mood for math in my head that day, this could have been calculated correctly before generating. After this I moved on to debugging the grid. Finally, I worked on the margin. Fixing the grid and margin required changes to the Sanguine library.
+First, I focused on getting the single shape right using the above-mentioned trial-and-error method. I was particularly not in the mood for math in my head that day, this could have been calculated correctly before generating. After this I moved on to debugging the grid. Finally, I worked on the margin. Fixing the grid and margin required changes to the [Sanguine library](https://github.com/Mirabellensaft/Sanguine/tree/main).
 
-The grid didn’t work because of a typo that had been in the library for almost two years. I hadn’t noticed it before because I never accessed that variable in this particular way. I mixed up a y for an x. As for the margin, that was something I never implemented correctly. It didn’t really matter when plotting, so I never paid much attention to it until now.
+The grid didn’t work because of a typo that had been in the library for almost two years. I hadn’t noticed it before because I never accessed that variable in this particular way. I mixed up a [y for an x](https://github.com/Mirabellensaft/Sanguine/blob/8b3098f1f80d6ee69b5257dc3e03a0b9dc31cd94/sanguine_lib/src/resources/layout/grid.rs#L63). As for the margin, that was something I never implemented correctly. It didn’t really matter when plotting, so I never paid much attention to it until now.
 
 To show the process, I have uploaded all the images I rendered along the way — from the starting point, which was based on another piece of code, to the final result. Every time I ran the code, an image was created. If you see multiple images that look the same, it means I didn’t change the code but used the console output instead to figure out where the mistake was. For example, in image 21, you can see how I moved the lines to check what was underneath. 
-
-
 
 <div class="gallery">
     <a href="/veranator/nr_000_20250119_171857.png" data-ngthumb="/veranator/nr_000_20250119_171857.png"></a> 
